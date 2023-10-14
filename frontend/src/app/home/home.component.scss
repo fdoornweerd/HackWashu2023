@@ -1,19 +1,49 @@
-button {
-    background-color: #00a859; /* Green button */
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  h1 {
+.hero {
+      background-image: url('path/to/your/background-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
     
-        font-family: "Arial", sans-serif;
-        font-size: 72px; /* Increased font size */
-        color: #007BFF; /* Blue color */
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow effect */
-        border: 2px solid #007BFF; /* Add a border */
-        padding: 10px; /* Add padding for better spacing */
-      
-  }
+    /* Hero Section Content */
+    .hero-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Hero Section Headline */
+    h1 {
+      font-family: "Arial", sans-serif;
+      font-size: 3rem; /* Adjust font size as needed */
+      color: #007BFF;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      border: 2px solid #007BFF;
+      padding: 10px;
+      margin: 0;
+    }
+    
+    /* Hero Section Subheadline */
+    p {
+      font-size: 1.2rem; /* Adjust font size as needed */
+      margin-bottom: 30px;
+    }
+    
+    /* Hero Section CTA Button */
+    button {
+      background-color: #007BFF; /* Adjust button color as needed */
+      color: #fff;
+      padding: 15px 30px; /* Increased padding for larger buttons */
+      font-size: 1.2rem; /* Adjust font size as needed */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px; /* Add margin to separate the button from the subheadline */
+    }
+    
+    
+    
+    
+    
+    
