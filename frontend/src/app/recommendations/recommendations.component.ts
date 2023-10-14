@@ -17,7 +17,7 @@ export class RecommendationsComponent {
   @Input() age: number = 0;
   @Input() proficient: string[] = [];
   @Input() learning: string[] = [];
-  @Input() intrests: string[] = [];
+  @Input() interests: string[] = [];
   @Input() bio: string = '';
 
   

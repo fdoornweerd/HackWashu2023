@@ -1,5 +1,5 @@
 .container {
-  position: relative; 
+  position: relative;
   border: 1px solid black;
   margin: 10px;
   padding: 5px;
@@ -8,17 +8,16 @@
 
 .remove,
 .approve {
-  position: absolute; 
-  top: 5px;
-  right: 5px;
+  position: relative; /* Change from absolute to relative */
   font-size: 20px;
   cursor: pointer;
+  margin-right: 10px; /* Add margin to separate them */
 }
 
 .remove {
-  color: red; 
+  color: red;
 }
 
 .approve {
-  color: green; 
+  color: green;
 }
