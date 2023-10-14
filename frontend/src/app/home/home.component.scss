@@ -102,6 +102,33 @@ body, h1, h2, p, ul, button {
         margin: 20px 0; /* Space above and below on smaller screens */
       }
     }
+
+    .contact {
+      width: calc(50% - 20px); /* Adjusted width with some margin */
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+      text-align: left; /* Left-align text */
+      background-color: #fff; /* White background color */
+      color: #000; /* Text color */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    /* Add a hover effect to white boxes */
+    .contact:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    }
+    
+    /* Cool hover effect for white boxes */
+    .box-white:hover {
+      transform: scale(1.05); /* Scale up on hover */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced box shadow on hover */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    
+    
     
     
     
