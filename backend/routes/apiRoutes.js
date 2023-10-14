@@ -7,28 +7,23 @@ const bcrypt = require('bcrypt');
 
 router.post('/signup', async (req, res) => {
     try {
-      const { email, password, username, age, proficient_languages, learning_languages, interests } = req.body;
+      console.log(req.body);
+      const { username, email, password } = req.body;
   
       // Hash the user's password before saving it to the database
       const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of hashing rounds
   
       // Insert the user data into your Supabase user table
-      const { data, error } = await supabase
-        .from('user') // Replace with your actual user table name
-        .upsert([
-          {
-            email,
-            password: hashedPassword, // Save the hashed password
-            username,
-            age,
-            proficient_languages,
-            learning_languages,
-            interests,
-          },
-        ]);
+      const { error } = await supabase
+      .from('user')
+      .insert(
+        { username: username, password: hashedPassword, email: email }
+      )
+
   
       if (error) {
-        return res.status(400).json({ error: 'User registration failed' });
+        console.error(error);
+        return res.status(400).json({ error: 'User registration failed', supabaseError: error });
       }
   
       // User registration successful
@@ -43,13 +38,13 @@ router.post('/signup', async (req, res) => {
 //signing in
 router.post('/signin', async (req, res) => {
 try {
-    const { email, password } = req.body;
+    const { username, password } = req.body;
 
     // Fetch user data from the Supabase user table by email
-    const { data, error } = await supabase
+    const { error } = await supabase
     .from('user')
     .select('*')
-    .eq('email', email);
+    .eq('username', username);
 
     if (error) {
     return res.status(500).json({ error: 'Server error' });
