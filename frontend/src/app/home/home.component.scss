@@ -14,9 +14,11 @@
     }
     
     .hero h1 {
-      font-size: 4rem; /* Increased font size for a more prominent title */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Prettier font */
+      font-size: 4rem;
       margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* More noticeable text shadow */
+      transition: transform 0.3s ease-in-out;
     }
     
     .hero p {
