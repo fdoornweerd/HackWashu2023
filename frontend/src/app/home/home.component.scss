@@ -23,6 +23,8 @@ body, h1, h2, p, ul, button {
       padding: 40px;
       border-radius: 8px;
       transition: transform 0.3s, box-shadow 0.3s;
+      margin: 0 auto; /* Horizontally center the buttons */
+  display: block;
     }
     
     .home-container .box-white {
@@ -61,12 +63,13 @@ body, h1, h2, p, ul, button {
   text-align: center; /* Center align the text */
   /* Add text shadow for a shadowy effect */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  /* Add a bubble-like border */
-  background: linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
-  background-clip: text;
+  /* Add a bubble-like background */
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #007BFF;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
     }
+    
     
     .hero p {
       font-size: 1.5rem;
