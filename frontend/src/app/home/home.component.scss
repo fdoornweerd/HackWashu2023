@@ -142,6 +142,11 @@ body, h1, h2, p, ul, button {
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced box shadow on hover */
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .home-container .box .cta-button {
+      margin: 20px auto; /* Center horizontally and add margin for spacing */
+      display: block;
+    }
     
     
     
