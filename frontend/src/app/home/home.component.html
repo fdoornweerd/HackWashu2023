@@ -1,14 +1,53 @@
 <div class="home-container">
-  <div class="hero">
 
+  <!-- Hero Section -->
+  <div class="hero">
     <h1>Welcome to LinguaLink</h1>
     <p>Connect with language learners worldwide.</p>
     <button [routerLink]="['/signup']" class="cta-button">Get Started</button>
   </div>
-  
 
-  
-  <h1>LinguaLink</h1>
-  <button [routerLink]="['/signup']" type="signup">Sign Up</button>
-  <button [routerLink]="['/signin']" type="signin">Sign In</button>
+  <!-- About Us Section -->
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>
+      At LinguaLink, we're passionate about connecting language enthusiasts from around the world. Our mission is to bridge language barriers and foster a global community of learners and speakers.
+    </p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Learn from native speakers</li>
+      <li>Teach your native language</li>
+      <li>Explore diverse cultures</li>
+      <!-- Add more features as needed -->
+    </ul>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+      <p>"LinguaLink has been a game-changer for my language learning journey. I've met amazing people and improved my skills significantly."</p>
+      <p><strong>- Sarah, Language Enthusiast</strong></p>
+    </div>
+    <!-- Add more testimonials as needed -->
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, feel free to reach out to us. We'd love to hear from you!</p>
+    <button [routerLink]="['/contact']" class="cta-button">Contact Us</button>
+  </section>
+
+  <!-- Sign Up and Sign In Buttons -->
+  <div class="signup-signin">
+    <h1>LinguaLink</h1>
+    <button [routerLink]="['/signup']" class="cta-button">Sign Up</button>
+    <button [routerLink]="['/signin']" class="cta-button">Sign In</button>
+  </div>
+
 </div>
