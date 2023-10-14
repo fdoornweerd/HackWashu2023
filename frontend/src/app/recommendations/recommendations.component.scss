@@ -6,12 +6,19 @@
   cursor: pointer;
 }
 
+.icons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex; /* Make the icons display as flex items */
+  flex-direction: row; /* Arrange them horizontally */
+}
+
 .remove,
 .approve {
-  position: relative; /* Change from absolute to relative */
   font-size: 20px;
   cursor: pointer;
-  margin-right: 10px; /* Add margin to separate them */
+  margin-left: 10px; /* Add margin to separate them */
 }
 
 .remove {
