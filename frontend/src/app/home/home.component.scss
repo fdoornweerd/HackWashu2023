@@ -8,15 +8,21 @@
     .hero {
       background-size: cover;
       background-position: center;
-      color: #fff;
+      color: #333; /* Slightly darker title color */
       text-align: center;
       padding: 100px 0;
     }
     
     .hero h1 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Prettier font */
       font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out; /* Add a subtle hover animation */
+    }
+    
+    .hero h1:hover {
+      transform: scale(1.05); /* Enlarge the title on hover */
     }
     
     .hero p {
@@ -37,23 +43,23 @@
     }
     
     .features ul {
-      list-style: none; /* Remove bullet points */
+      list-style: none;
       padding: 0;
     }
     
     .features ul li {
-      margin-bottom: 20px; /* Improved spacing between list items */
+      margin-bottom: 20px;
       font-size: 1.3rem;
       position: relative;
-      padding-left: 40px; /* Add space for custom bullet point */
+      padding-left: 40px;
     }
     
     .features ul li::before {
-      content: "\2022"; /* Custom bullet point */
+      content: "\2022";
       position: absolute;
       left: 0;
       top: 6px;
-      color: #007BFF; /* Bullet point color */
+      color: #007BFF;
       font-size: 1.5rem;
     }
     
@@ -94,17 +100,18 @@
       cursor: pointer;
       margin-top: 30px;
       text-transform: uppercase;
-      transition: transform 0.3s ease; /* Add a hover effect */
+      transition: transform 0.3s ease;
     }
     
     .cta-button:hover {
-      transform: scale(1.05); /* Enlarge the button on hover */
+      transform: scale(1.05);
     }
     
     /* Styling for h2 headings */
     h2 {
-      font-size: 2.5rem; /* Larger font size for h2 headings */
-      color: #007BFF; /* Heading color */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Prettier font */
+      font-size: 2.5rem;
+      color: #007BFF;
       text-transform: uppercase;
       margin-bottom: 20px;
     }
