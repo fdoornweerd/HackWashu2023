@@ -1,28 +1,6 @@
-.recommendation-card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .view-profile,
-  .accept,
-  .reject {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .accept {
-    background-color: #4CAF50;
-    color: #fff;
-  }
-  
-  .reject {
-    background-color: #FF5733;
-    color: #fff;
-  }
+.container{
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
