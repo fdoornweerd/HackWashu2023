@@ -20,27 +20,26 @@ body, h1, h2, p, ul, button {
     /* Alternating Background Boxes */
     .home-container .box,
     .home-container .box-white {
+      width: calc(50% - 20px); /* Set white boxes to 50% width */
       padding: 40px;
       border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
     }
     
     .home-container .box-white {
-      width: 50%; /* Set white boxes to 50% width */
       background-color: #fff;
       color: #000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
     }
     
     .home-container .box {
       background-color: #000;
       color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
     }
     
     .home-container .box:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced box shadow on hover */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     
     /* Hero Section Styles */
@@ -54,7 +53,7 @@ body, h1, h2, p, ul, button {
       font-size: 4rem;
       margin-bottom: 20px;
       text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-      //color: #007BFF; /* Maintain title color */
+      /* color: #007BFF; Maintain title color */
     }
     
     .hero p {
@@ -79,73 +78,46 @@ body, h1, h2, p, ul, button {
     /* About Us and Discover Sections */
     .about-us-and-discover {
       display: flex;
-  flex-wrap: wrap;
-  margin-top: 60px;
+      flex-wrap: wrap;
+      margin-top: 60px;
     }
     
     .about-us,
     .features {
-      width: calc(50% - 20px);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
+      width: 50%; /* Adjusted width with some margin */
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left; /* Left-align text */
+    }
+    
+    /* Testimonials and Contact Sections */
+    .testimonial-and-contact {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+    
+    .testimonials,
+    .contact {
+      width: 50%; /* Adjusted width with some margin */
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left; /* Left-align text */
     }
     
     /* Responsive adjustments */
     @media screen and (max-width: 768px) {
       .about-us,
-      .features {
+      .features,
+      .testimonials,
+      .contact {
         width: 100%; /* Full width on smaller screens */
         margin: 20px 0; /* Space above and below on smaller screens */
       }
     }
-    .testimonial-and-contact {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-top: 60px;
-      width: 100%;
-    }
     
-    .testimonials,
-    .contact {
-      width: calc(50% - 20px);
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: left;
-    }
-    
-    /* Responsive adjustments */
-    @media screen and (max-width: 768px) {
-      .testimonials,
-      .contact {
-        width: 100%;
-        margin: 20px 0;
-      }
-    }
-    .about-us,
-.features,
-.testimonials,
-.contact {
-  width: calc(50% - 20px);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .about-us,
-  .features,
-  .testimonials,
-  .contact {
-    width: 100%;
-    margin: 20px 0;
-  }
-}
 
 
 
