@@ -5,9 +5,12 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
-
+import { PeopleContainerComponent } from './people-container/people-container.component';
+import { SignupComponent } from './signup/signup.component';
+import { MatchesComponent } from './matches/matches.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -15,7 +18,7 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [ SigninComponent, BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
+  imports: [ MatchesComponent,SignupComponent, PeopleContainerComponent, SigninComponent, BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
