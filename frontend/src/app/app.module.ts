@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 export function tokenGetter() {
@@ -14,7 +15,7 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
+  imports: [ SigninComponent, BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
