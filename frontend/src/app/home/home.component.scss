@@ -48,13 +48,17 @@ body, h1, h2, p, ul, button {
       width: 100%; /* Set to 100% for full width */
       padding: 100px 0; /* Adjust padding as needed */
       margin: 0; /* Remove margin for full width */
+      text-align: center;
     }
     
     .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-      color: #007BFF; /* Maintain title color */
+      font-size: 6rem; /* Increase font size */
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7); /* Increase shadow effect */
+  color: #fff; /* Set title color to white */
+  font-weight: bold; /* Make the title bold */
+  letter-spacing: 2px; /* Add letter spacing for a 3D effect */
+  text-transform: uppercase; 
     }
     
     .hero p {
