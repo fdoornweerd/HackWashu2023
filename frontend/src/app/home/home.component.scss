@@ -79,10 +79,8 @@ body, h1, h2, p, ul, button {
     /* About Us and Discover Sections */
     .about-us-and-discover {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-top: 60px;
-      width: 100%;
+  flex-wrap: wrap;
+  margin-top: 60px;
     }
     
     .about-us,
@@ -127,6 +125,34 @@ body, h1, h2, p, ul, button {
         margin: 20px 0;
       }
     }
+    .about-us,
+.features,
+.testimonials,
+.contact {
+  width: calc(50% - 20px);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .about-us,
+  .features,
+  .testimonials,
+  .contact {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
+
+
+
+
+
+
+
     
     
     
