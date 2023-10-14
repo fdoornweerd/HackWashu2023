@@ -22,7 +22,7 @@ body, h1, h2, p, ul, button {
     .home-container .box-white {
       width: calc(33.33% - 40px);
       padding: 40px;
-      
+      margin: 20px 0;
       border-radius: 8px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -37,6 +37,11 @@ body, h1, h2, p, ul, button {
       background-color: #000;
       color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    }
+    .hero .box {
+      width: 100%; /* Set to 100% for full-width */
+      padding: 100px 0; /* Adjust padding as needed */
+      margin: 0; /* Remove margin for full-width */
     }
     
     .home-container .box:hover {
