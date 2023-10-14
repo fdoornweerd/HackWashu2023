@@ -1,1 +1,15 @@
 <p>chat works!</p>
+<div class="chat-container">
+    <div class="contact-name">
+      <strong>Contact Name:</strong> {{ contactName }}
+    </div>
+    <div class="chat-messages">
+      <div *ngFor="let message of messages">
+        <p><strong>{{ contactName }}:</strong> {{ message }}</p>
+      </div>
+    </div>
+    <div class="message-input">
+      <input type="text" [(ngModel)]="messageInput" class="chat-input" placeholder="Type a message...">
+      <button class="send-button" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
