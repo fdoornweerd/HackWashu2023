@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-matches',
@@ -12,5 +13,11 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent {
-
+  @Input() firstName: string = '';
+  @Input() lastName: string = '';
+  @Input() age: number = 0;
+  @Input() proficient: string[] = [];
+  @Input() learning: string[] = [];
+  @Input() intrests: string[] = [];
+  @Input() bio: string = '';
 }

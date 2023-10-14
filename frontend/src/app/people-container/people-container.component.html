@@ -1,6 +1,11 @@
-<div class="people-container">
-    <app-matches></app-matches>
-    <app-matches></app-matches>
-    <app-matches></app-matches>
-    <app-matches></app-matches>
+<div class ='people-container'>
+    <app-matches *ngFor="let match of matches" 
+        [firstName]="match.firstName" 
+        [lastName]="match.lastName" 
+        [age]="match.age" 
+        [proficient]="match.proficient" 
+        [learning]="match.learning" 
+        [intrests]="match.interests"
+        [bio]="match.bio"
+    ></app-matches>
 </div>
