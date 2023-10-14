@@ -17,36 +17,12 @@ body, h1, h2, p, ul, button {
       padding: 20px;
     }
     
-    /* Alternating Background Boxes */
-    .home-container .box,
-    .home-container .box-white {
-      width: calc(50% - 20px); /* Set white boxes to 50% width */
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: left;
-    }
-    
-    .home-container .box-white {
-      background-color: #fff;
-      color: #000;
-    }
-    
-    .home-container .box {
-      background-color: #000;
-      color: #fff;
-    }
-    
-    .home-container .box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    
     /* Hero Section Styles */
     .hero .box {
       width: 100%; /* Set to 100% for full width */
       padding: 100px 0; /* Adjust padding as needed */
       margin: 0; /* Remove margin for full width */
+      background-color: #000; /* Set background color to black */
     }
     
     .hero h1 {
@@ -73,6 +49,31 @@ body, h1, h2, p, ul, button {
       margin-top: 30px;
       text-transform: uppercase;
       /* Maintain button styles */
+    }
+    
+    /* Alternating Background Boxes */
+    .home-container .box,
+    .home-container .box-white {
+      width: calc(50% - 20px); /* Set white boxes to 50% width */
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    
+    .home-container .box-white {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    .home-container .box {
+      background-color: #000;
+      color: #fff;
+    }
+    
+    .home-container .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     
     /* About Us and Discover Sections */
