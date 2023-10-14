@@ -1,1 +1,10 @@
 <p>recommendations works!</p>
+<div class="card-list">
+    <div *ngFor="let person of people" class="card">
+      <h2>{{ person.firstName }} {{ person.lastName }}</h2>
+      <p>Age: {{ person.age }}</p>
+      <p>Proficient Languages: {{ person.proficientLanguages }}</p>
+      <p>Languages Learning: {{ person.languagesLearning }}</p>
+      <a [routerLink]="['/match-profile', person.id]">View Profile</a>
+    </div>
+  </div>
