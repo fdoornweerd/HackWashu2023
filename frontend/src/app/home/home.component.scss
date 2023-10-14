@@ -20,8 +20,9 @@ body, h1, h2, p, ul, button {
     /* Alternating Background Boxes */
     .home-container .box,
     .home-container .box-white {
+      width: calc(33.33% - 40px);
       padding: 40px;
-      margin: 20px 0;
+      
       border-radius: 8px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -110,15 +111,16 @@ body, h1, h2, p, ul, button {
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 60px;
+      width: 100%;
     }
     
     .about-us,
     .features {
-      width: calc(50% - 20px); /* 50% width with some margin */
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-      text-align: left; /* Left-align text */
+      width: calc(50% - 40px); /* Adjusted width with more margin */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left
     }
     
     /* Responsive adjustments */
