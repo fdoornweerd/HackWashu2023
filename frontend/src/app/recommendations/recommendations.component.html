@@ -1,10 +1,12 @@
 <p>recommendations works!</p>
-<div class="card-list">
-    <div *ngFor="let person of people" class="card">
-      <h2>{{ person.firstName }} {{ person.lastName }}</h2>
-      <p>Age: {{ person.age }}</p>
-      <p>Proficient Languages: {{ person.proficientLanguages }}</p>
-      <p>Languages Learning: {{ person.languagesLearning }}</p>
-      <a [routerLink]="['/match-profile', person.id]">View Profile</a>
-    </div>
+<div class="recommendation-card">
+    <h2>{{ firstName }} {{ lastName }}</h2>
+    <p>Age: {{ age }}</p>
+    <p>Proficient Languages: {{ proficientLanguages.join(', ') }}</p>
+    <p>Languages Learning: {{ languagesLearning.join(', ') }}</p>
+    <button class="view-profile" [routerLink]="['/match-profile', id]">View Full Profile</button>
+    <button class="accept" (click)="acceptRecommendation()"><i class="fas fa-check"></i> Accept</button>
+    <button class="reject" (click)="rejectRecommendation()"><i class="fas fa-times"></i> Reject</button>
   </div>
+  
+  

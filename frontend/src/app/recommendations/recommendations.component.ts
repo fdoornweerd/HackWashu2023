@@ -13,24 +13,42 @@ export class RecommendationsComponent {
 
 }
 
-/*import { PersonService } from './person.service'; // Import your service
+/* 
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-person-list',
-  templateUrl: './person-list.component.html',
-  styleUrls: ['./person-list.component.css']
+  selector: 'app-recommendation',
+  templateUrl: './recommendations.component.html',
+  styleUrls: ['./recommendations.component.css']
 })
-export class PersonListComponent implements OnInit {
-  people: any[] = [];
+export class RecommendationsComponent {
+  @Input() firstName: string;
+  @Input() lastName: string;
+  @Input() age: number;
+  @Input() proficientLanguages: string[];
+  @Input() languagesLearning: string[];
+  @Input() id: number;
 
-  constructor(private personService: PersonService) {} // Inject your service
+  acceptRecommendation() {
+    // Implement logic to accept the recommendation and remove it from the container.
+  }
 
-  ngOnInit() {
-    this.personService.getPeople().subscribe((data: any[]) => {
-      this.people = data; // Populate the people array with data from your service
-    });
+  rejectRecommendation() {
+    // Implement logic to reject the recommendation and remove it from the container.
   }
 }
+Add Font Awesome icons for the check and times icons by including the Font Awesome library in your project or using a CDN in your HTML file.
+html
+Copy code
+<!-- Add this to your HTML file to include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+This structure will allow you to create recommendation cards with the specified functionality within your Angular project. You can then include these recommendation cards in a container on another page as needed.
+
+
+
+
+
+
 */
 
 
