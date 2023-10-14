@@ -9,6 +9,7 @@
       <label for="password">Password</label>
       <input type="password" id="password" name="password" [(ngModel)]="password" required>
     </div>
-    <button type="submit">Sign In</button>
+    <button [routerLink]="['/hub']" type="submit">Sign In</button>
   </form>
 </div>
+
