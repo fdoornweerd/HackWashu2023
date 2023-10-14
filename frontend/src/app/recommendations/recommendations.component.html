@@ -1,6 +1,8 @@
-<div class = 'container'>
-    <h1>{{firstName}} {{lastName}}, {{age}}</h1>
-    <h3>Proficient Languages: {{proficient}}, Learning Languages: {{learning}}</h3>
-    <p>Intrests: {{intrests}}</p>
-    <p>Bio: {{bio}}</p>
-</div>
+<div class="container">
+    <div class="remove" (click)="removeRecommendation()">&#10006;</div>
+    <div class="approve" (click)="moveToMatches()">&#10004;</div>
+    <h1>{{ firstName }} {{ lastName }}, {{ age }}</h1>
+    <h3>Proficient Languages: {{ proficient }}, Learning Languages: {{ learning }}</h3>
+    <p>Interests: {{ interests }}</p>
+    <p>Bio: {{ bio }}</p>
+  </div>
