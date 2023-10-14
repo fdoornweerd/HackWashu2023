@@ -6,7 +6,6 @@
     
     /* Hero Section Styles */
     .hero {
-      
       background-size: cover;
       background-position: center;
       color: #fff;
@@ -15,69 +14,71 @@
     }
     
     .hero h1 {
-      font-size: 3rem;
+      font-size: 4rem; /* Increased font size for a more prominent title */
       margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
+      font-size: 1.5rem; /* Adjusted font size for better readability */
+      margin-bottom: 40px; /* Increased margin for spacing */
     }
     
     /* About Us Section Styles */
     .about-us {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px; /* Increased top margin for separation */
     }
     
     /* Features Section Styles */
     .features {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px; /* Increased top margin for separation */
     }
     
     .features ul {
       list-style-type: disc;
-      padding-left: 20px;
+      padding-left: 30px; /* Increased padding for better alignment */
+      font-size: 1.3rem; /* Adjusted font size for better readability */
     }
     
     /* Testimonials Section Styles */
     .testimonials {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px; /* Increased top margin for separation */
     }
     
     .testimonial {
       background-color: #f7f7f7;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px; /* Increased margin for spacing */
+      border-radius: 10px; /* Increased border radius for a smoother look */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     /* Contact Section Styles */
     .contact {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px; /* Increased top margin for separation */
     }
     
     /* Sign Up and Sign In Buttons Styles */
     .signup-signin {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px; /* Increased top margin for separation */
     }
     
     /* Shared Button Styles */
     .cta-button {
       background-color: #007BFF;
       color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2rem;
+      padding: 20px 40px; /* Increased padding for larger buttons */
+      font-size: 1.5rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px; /* Increased border radius for a rounded look */
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: 30px; /* Increased margin for spacing */
+      text-transform: uppercase; /* Uppercase button text */
     }
     
     
