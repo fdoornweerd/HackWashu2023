@@ -1,120 +1,120 @@
 body, h1, h2, p, ul, button {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Global styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f2f2f2; /* Light gray background */
-      text-align: center; /* Center text globally */
-    }
-    
-    /* Home Container Styles */
-    .home-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center content horizontally */
-    }
-    
-    /* Alternating Background Boxes */
-    .home-container .box,
-    .home-container .box-white {
-      width: 48%; /* Set width for boxes */
-      padding: 40px;
-      margin: 20px 1%; /* Add some space between boxes */
-      border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: inline-block;
-      vertical-align: top; /* Align boxes at the top */
-      text-align: left; /* Left-align text */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    }
-    
-    /* Hero Section Styles */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center content horizontally */
-      padding: 80px 0; /* Increased padding */
-    }
-    
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Smoother text shadow */
-      color: #007BFF; /* Darker title color */
-    }
-    
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 20px; /* Reduced margin for cleaner look */
-    }
-    
-    /* About Us and Discover Sections Styles */
-    .about-us,
-    .features {
-      width: 48%; /* Set width for boxes */
-      padding: 40px;
-      margin: 20px 1%; /* Add some space between boxes */
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    }
-    
-    .features ul {
-      list-style-type: disc;
-      padding-left: 20px; /* Adjusted list padding */
-      font-size: 1.3rem;
-      line-height: 1.5; /* Increased line height for better readability */
-    }
-    
-    /* Testimonials Section Styles */
-    .testimonials {
-      width: 100%;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-      margin-top: 20px; /* Reduced top margin */
-    }
-    
-    /* Contact Section Styles */
-    .contact {
-      width: 100%;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-      margin-top: 20px; /* Reduced top margin */
-    }
-    
-    /* Sign Up and Sign In Buttons Styles */
-    .cta-button {
-      background-color: #007BFF;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 20px; /* Reduced top margin */
-      text-transform: uppercase;
-    }
-    
-    /* Responsive adjustments */
-    @media screen and (max-width: 768px) {
-      .home-container .box,
-      .home-container .box-white,
-      .about-us,
-      .features,
-      .testimonials,
-      .contact {
-        width: 100%; /* Full width on smaller screens */
-        margin: 20px 0; /* Space above and below on smaller screens */
-      }
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2; /* Light gray background */
+  text-align: center; /* Center text globally */
+}
+
+/* Home Container Styles */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Alternating Background Boxes */
+.home-container .box,
+.home-container .box-white {
+  width: 48%; /* Set width for boxes */
+  padding: 40px;
+  margin: 20px 1%; /* Add some space between boxes */
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  vertical-align: top; /* Align boxes at the top */
+  text-align: left; /* Left-align text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 80px 0; /* Increased padding */
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Smoother text shadow */
+  color: #007BFF; /* Darker title color */
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Reduced margin for cleaner look */
+}
+
+/* About Us and Discover Sections Styles */
+.about-us,
+.features {
+  width: 48%; /* Set width for boxes */
+  padding: 40px;
+  margin: 20px 1%; /* Add some space between boxes */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.features ul {
+  list-style-type: disc;
+  padding-left: 20px; /* Adjusted list padding */
+  font-size: 1.3rem;
+  line-height: 1.5; /* Increased line height for better readability */
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+  width: 100%;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  margin-top: 20px; /* Reduced top margin */
+}
+
+/* Contact Section Styles */
+.contact {
+  width: 100%;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  margin-top: 20px; /* Reduced top margin */
+}
+
+/* Sign Up and Sign In Buttons Styles */
+.cta-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px; /* Reduced top margin */
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .home-container .box,
+  .home-container .box-white,
+  .about-us,
+  .features,
+  .testimonials,
+  .contact {
+    width: 100%; /* Full width on smaller screens */
+    margin: 20px 0; /* Space above and below on smaller screens */
+  }
+}
     
     
     
