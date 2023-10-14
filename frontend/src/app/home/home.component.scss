@@ -17,12 +17,37 @@ body, h1, h2, p, ul, button {
       padding: 20px;
     }
     
+    /* Alternating Background Boxes */
+    .home-container .box,
+    .home-container .box-white {
+      padding: 40px;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .home-container .box-white {
+      width: 50%; /* Set white boxes to 50% width */
+      background-color: #fff;
+      color: #000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    }
+    
+    .home-container .box {
+      background-color: #000;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    }
+    
+    .home-container .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced box shadow on hover */
+    }
+    
     /* Hero Section Styles */
     .hero .box {
       width: 100%; /* Set to 100% for full width */
       padding: 100px 0; /* Adjust padding as needed */
       margin: 0; /* Remove margin for full width */
-      background-color: #000; /* Set background color to black */
     }
     
     .hero h1 {
@@ -51,37 +76,13 @@ body, h1, h2, p, ul, button {
       /* Maintain button styles */
     }
     
-    /* Alternating Background Boxes */
-    .home-container .box,
-    .home-container .box-white {
-      width: calc(50% - 20px); /* Set white boxes to 50% width */
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: left;
-    }
-    
-    .home-container .box-white {
-      background-color: #fff;
-      color: #000;
-    }
-    
-    .home-container .box {
-      background-color: #000;
-      color: #fff;
-    }
-    
-    .home-container .box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    
     /* About Us and Discover Sections */
     .about-us-and-discover {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 60px;
       justify-content: space-between;
+      margin-top: 60px;
+      width: 100%;
     }
     
     .about-us,
@@ -93,29 +94,10 @@ body, h1, h2, p, ul, button {
       text-align: left; /* Left-align text */
     }
     
-    /* Testimonials and Contact Sections */
-    .testimonial-and-contact {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 60px;
-      justify-content: space-between;
-    }
-    
-    .testimonials,
-    .contact {
-      width: calc(50% - 20px); /* Adjusted width with some margin */
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: left; /* Left-align text */
-    }
-    
     /* Responsive adjustments */
     @media screen and (max-width: 768px) {
       .about-us,
-      .features,
-      .testimonials,
-      .contact {
+      .features {
         width: 100%; /* Full width on smaller screens */
         margin: 20px 0; /* Space above and below on smaller screens */
       }
