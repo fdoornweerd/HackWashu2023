@@ -54,18 +54,25 @@ body, h1, h2, p, ul, button {
     .hero h1 {
       font-size: 6rem; /* Increase font size */
   margin-bottom: 20px;
-  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7); /* Increase shadow effect */
   color: #fff; /* Set title color to white */
   font-weight: bold; /* Make the title bold */
   letter-spacing: 2px; /* Add letter spacing for a 3D effect */
-  text-transform: uppercase; 
-  text-align: center;
+  text-transform: uppercase; /* Uppercase text */
+  text-align: center; /* Center align the text */
+  /* Add text shadow for a shadowy effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add a bubble-like border */
+  background: linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
     }
     
     .hero p {
       font-size: 1.5rem;
       margin-bottom: 40px;
       color: #fff; /* Maintain text color */
+      text-align: center;
     }
     
     .hero .cta-button {
@@ -79,6 +86,7 @@ body, h1, h2, p, ul, button {
       margin-top: 30px;
       text-transform: uppercase;
       /* Maintain button styles */
+      text-align: center;
     }
     
     /* About Us and Discover Sections */
