@@ -1,14 +1,6 @@
 <div class ='recommend-container'>
     <div style="margin-left:35%"><h1>Recommended</h1></div>
-    <app-recommendations *ngFor="let person of people" 
-        [firstName]="person.firstName" 
-        [lastName]="person.lastName" 
-        [age]="person.age" 
-        [proficient]="person.proficient" 
-        [learning]="person.learning" 
-        [interests]="person.interests"
-        [blurb]="person.blurb"
-        [id] = "person.id"
-        (remove)="removeRecommendation(person)"
-        ></app-recommendations>
+    <ng-container *ngFor="let user of recommendedUsers" >
+        <app-recommendations [user]="user"></app-recommendations>
+    </ng-container>
 </div>

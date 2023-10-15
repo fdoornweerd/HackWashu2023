@@ -9,6 +9,7 @@ body, h1, h2, p, ul, button {
 
 /* Main Container Styles */
 .main-container {
+  font-family: Andika;
   max-width: none;
   margin: 0;
   padding: 0;
@@ -57,28 +58,55 @@ body, h1, h2, p, ul, button {
   margin-top: 30px;
   text-transform: uppercase;
 }
+.cta-buttons {
+  display: flex; /* Display buttons in a row */
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 20px; /* Adjust top margin for spacing */
+}
 
-/* Containers for About Us, Discover, Testimonials, and Contact */
+/* Style the Sign In and Sign Up buttons */
+.cta-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 30px; /* Adjust padding for button size */
+  font-size: 1rem; /* Adjust font size for button size */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-right: 10px; /* Add a small gap between buttons */
+}
+
+.cta-button:last-child {
+  margin-right: 0; /* Remove the right margin from the last button */
+}
+
+
+
+
+
+
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the boxes horizontally */
-  align-items: center; /* Center the boxes vertically */
+  flex-direction: column;
+  justify-content: center; /* Center the boxes horizontally and vertically */
+  align-items: center;
   margin-top: 30px; /* Adjusted margin to create space below the fixed top */
   padding: 20px;
 }
 
 .box {
   width: calc(95% - 40px); /* Adjusted width for 3 columns with margin */
-  padding: 100px; /* Increased padding for more height */
+  padding: 70px; /* Increased padding for more height */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  text-align: left;
+  text-align: center; /* Center the text horizontally */
   background-color: #fff;
   color: #000;
   transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 30px; /* Add margin at the bottom for spacing */
-  height: auto; /* Add margin at the bottom for spacing */
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  height: auto; /* Adjusted height to auto */
+  font-family: Andika, sans-serif; /* Set the font to Andika */
 }
 
 /* Center the containers */
@@ -89,7 +117,7 @@ body, h1, h2, p, ul, button {
   flex-direction: column;
   justify-content: center; /* Center the containers horizontally */
   align-items: center; /* Center the containers vertically */
-  margin-top: 365px; /* Adjusted margin to create space below the fixed top */
+  margin-top: 415px; /* Adjusted margin to create space below the fixed top */
   width: 100%;
 }
 
@@ -113,7 +141,29 @@ body, h1, h2, p, ul, button {
   }
 }
 
+.features ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Arrange items in a line */
+  justify-content: space-between; /* Space items evenly */
+}
 
+.features li {
+  width: 30%; /* Adjust the width as needed for spacing */
+}
+.spacer {
+  height: 20px; /* Adjust the height as needed */
+}
+.contact-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 15px 30px; /* Adjust padding for smaller size */
+  font-size: 1rem; /* Adjust font size for smaller size */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px; /* Adjust top margin for spacing */
+  text-transform: uppercase;
+}
     
     
     
