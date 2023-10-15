@@ -1,14 +1,11 @@
-<div class="container">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Andika" />
-    
-    <div class="icons">
-      <div class="remove" (click)="removeRecommendation()">&#10006;</div>
-      <div class="approve" (click)="moveToMatches()">&#10004;</div> 
-    </div>
-
-    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
-    <p>Age:{{ user.age }}</p>
-    <h3>Proficient Languages: {{ user.proficient_languages }}, Learning Languages: {{ user.learning_languages }}</h3>
-    <p>Interests: {{ user.interests }}</p>
-
+<div class="container" *ngIf="showElement">
+  <div class="icons">
+    <div class="remove" (click)="removeRecommendation()">&#10006;</div>
+    <div class="approve" (click)="moveToMatches()">&#10004;</div>
   </div>
+
+  <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+  <p>Age: {{ user.age }}</p>
+  <h3>Proficient Languages: {{ user.proficient_languages }}, Learning Languages: {{ user.learning_languages }}</h3>
+  <p>Interests: {{ user.interests }}</p>
+</div>

@@ -6,8 +6,8 @@ import { Message } from './Message';
   providedIn: 'root'
 })
 export class OpenaiService {
-  private apiKey = '';
-  private apiUrl = 'https://api.openai.com/v1/chat/completions'; 
+  private apiKey = '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'; // Replace with your API key
+  private apiUrl = 'https://api.openai.com/v1/chat/completions'; // Replace with the OpenAI API endpoint
   
  
   constructor(private http: HttpClient) {}

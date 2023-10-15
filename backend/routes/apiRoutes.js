@@ -160,7 +160,6 @@ router.get('/get-recommendations/:id', async (req, res) => {
       return res.status(500).json({ error: 'Server error', supabaseError: error });
     }
     
-    console.log(data);
     if (data) {
       return res.status(200).json({ recommendations: data });
     } else {
@@ -183,7 +182,6 @@ router.post('/like-user/:userId/:likedUserId', async (req, res) => {
       user_id: userId,
       liked_user_id: likedUserId,
     };
-    console.log(likeData);
 
     // Perform the insert operation
     const { data, error } = await supabase
@@ -196,6 +194,8 @@ router.post('/like-user/:userId/:likedUserId', async (req, res) => {
     }
 
     // Check for mutual likes by querying the user_likes table
+
+    console.log("checking if " + userId + " and " + likedUserId + " have mutual likes");
     const { data: mutualLikes, error: mutualLikesError } = await supabase
       .from('user_likes')
       .select('user_id')
@@ -222,6 +222,41 @@ router.post('/like-user/:userId/:likedUserId', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+
+// New route to check for all user's matches
+// New route to check for all user's matches
+router.post('/check-all-matches/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    // Use Supabase to perform the query to get all mutual matches for the user
+    const { data, error } = await supabase
+      .from('user_likes')
+      .select('liked_user_id')
+      .eq('user_id', userId)
+      .in('liked_user_id', supabase
+        .from('user_likes')
+        .select('user_id')
+        .eq('liked_user_id', userId)
+      );
+
+    if (error) {
+      console.error('Error checking mutual likes:', error);
+      return res.status(500).json({ error: 'Mutual likes check failed' });
+    }
+
+    // Respond with the list of all mutual likes (matches)
+    console.log("allMutualLikes: " + data);
+    return res.status(200).json({ matches: data });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
+
+
 
 
 const recommendationsQuery = `

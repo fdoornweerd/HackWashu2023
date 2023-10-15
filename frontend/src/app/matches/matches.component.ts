@@ -4,6 +4,7 @@ import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Input } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-matches',
@@ -13,6 +14,8 @@ import { Input } from '@angular/core';
   styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent {
+  @Input() user!: User;
+
   @Input() firstName: string = '';
   @Input() lastName: string = '';
   @Input() age: number = 0;

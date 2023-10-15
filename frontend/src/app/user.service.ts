@@ -45,6 +45,17 @@ export class UserService {
       })
     );
   }
+
+  checkForAllMatches(userId: number): Observable<any> {
+    const url = `${this.apiUrl}/check-all-matches/${userId}`;
+  
+    return this.http.post(url, null).pipe(
+      tap((response) => {
+        // You can perform additional actions here based on the response
+        console.log('Check for all matches result:', response);
+      })
+    );
+  }
   
   
 

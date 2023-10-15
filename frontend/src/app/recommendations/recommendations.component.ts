@@ -21,6 +21,8 @@ import { OnInit } from '@angular/core';
 export class RecommendationsComponent implements OnInit{
   @Input() user!: User;
   userId: string | null = null;
+  showElement: boolean = true;
+
 
 
   // @Input() firstName: string = '';
@@ -52,6 +54,8 @@ export class RecommendationsComponent implements OnInit{
 
   
   moveToMatches() {
+    this.showElement = false;
+
     if(this.userId) {
       this.userService.likeUser(parseInt(this.userId), this.user.user_id).subscribe({
         next: (response) => {
@@ -80,7 +84,9 @@ export class RecommendationsComponent implements OnInit{
 
   removeRecommendation() {
 
-    // //this.remove.emit();
+    this.showElement = false;
+
+    // this.remove.emit();
     // this.holdGlobalsService.removePerson(this.id);
 
   }

@@ -3,14 +3,8 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Andika" />
     
     <div style="margin-left:38%"><h1>Matches</h1></div>
-    <app-matches *ngFor="let match of matches" 
-        [firstName]="match.firstName" 
-        [lastName]="match.lastName" 
-        [age]="match.age" 
-        [proficient]="match.proficient" 
-        [learning]="match.learning" 
-        [intrests]="match.interests"
-        [blurb]="match.blurb"
-        [id]="match.id"
-    ></app-matches>
+
+    <ng-container *ngFor="let match of matches" >
+        <app-matches [user]="match"></app-matches>
+    </ng-container>
 </div>
