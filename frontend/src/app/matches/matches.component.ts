@@ -8,7 +8,7 @@ import { Input } from '@angular/core';
 @Component({
   selector: 'app-matches',
   standalone: true,
-  imports: [FormsModule, NgFor, CommonModule],
+  imports: [FormsModule, NgFor, CommonModule, RouterModule],
   templateUrl: './matches.component.html',
   styleUrls: ['./matches.component.scss']
 })
@@ -19,5 +19,7 @@ export class MatchesComponent {
   @Input() proficient: string[] = [];
   @Input() learning: string[] = [];
   @Input() intrests: string[] = [];
-  @Input() bio: string = '';
+  @Input() blurb: string = '';
+  @Input() id: number = 0;
+  contact: boolean = true;
 }
