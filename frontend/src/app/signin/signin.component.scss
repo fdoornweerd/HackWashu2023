@@ -1,53 +1,218 @@
 body {
+  margin: 0;
+  padding: 0;
+  background-color: #3399ff; /* Blue background color for the entire page */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f2f2f2; /* Match the light gray background color */
+  min-height: 100vh;
+  overflow: hidden;
+}
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; 
+  background-color: #3399ff;/* Set z-index to place it behind everything */
 }
 
+
+
+/* Style for the sign-in container */
 .signin-container {
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Position the container above the circles */
   background-color: #fff;
-  border-radius: 8px; /* Match the border-radius */
-  padding: 40px; /* Increase padding for more spacing */
-  text-align: left; /* Left-align text */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match the subtle box shadow */
+  border-radius: 8px;
+  padding: 80px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 700px;
+}
+.ripple-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background-color: #3399ff; /* Set z-index to position the circles behind the content */
 }
 
+
+
+
+
+/* Apply hover effect */
+
+
+/* Style for the title */
 .signin-container h2 {
-  color: #007BFF; /* Match the blue color */
+  color: #3399ff; /* Blue color for the title */
 }
 
+/* Style for form elements */
 .form-group {
-  margin: 20px 0; /* Increase margin for more spacing */
+  margin: 20px 0;
 }
 
-label {
-  display: block;
-  font-weight: bold;
-}
+
 
 input {
   width: 100%;
-  padding: 20px; /* Increase padding for more spacing */
-  margin-top: 10px; /* Adjust margin-top for spacing */
-  border: 2px solid #ccc; /* Match the border style */
-  border-radius: 8px; /* Match the border-radius */
+  padding: 15px; /* Slightly reduce padding for a cleaner look */
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
 }
 
+/* Highlight input on focus */
+input:focus {
+  border-color: #007BFF;
+}
+
+/* Style for the sign-in button */
 button {
-  background-color: #007BFF; /* Match the blue button color */
+  background-color: #007BFF;
   color: #fff;
-  padding: 20px 40px; /* Increase padding for more spacing */
+  padding: 15px 30px; /* Slightly reduce padding for a cleaner look */
   border: none;
-  border-radius: 8px; /* Match the border-radius */
+  border-radius: 8px;
   cursor: pointer;
-  text-transform: uppercase; /* Add text-transform for uppercase text */
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  font-weight: bold; /* Add font weight for emphasis */
+  margin-top: 20px;
 }
 
-/* Add hover effect for the button */
+/* Apply hover effect to the button */
 button:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
-  transition: background-color 0.3s; /* Smooth hover transition */
+  background-color: #0056b3;
+}
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+}
+
+.small {
+  width: 300px; /* Adjust the size as needed */
+  height: 300px; /* Adjust the size as needed */
+  left: -150px; /* Adjust the position as needed */
+  bottom: -150px; /* Adjust the position as needed */
+}
+
+.medium {
+  width: 600px; /* Adjust the size as needed */
+  height: 600px; /* Adjust the size as needed */
+  left: -300px; /* Adjust the position as needed */
+  bottom: -300px; /* Adjust the position as needed */
+}
+
+.large {
+  width: 900px; /* Adjust the size as needed */
+  height: 900px; /* Adjust the size as needed */
+  left: -450px; /* Adjust the position as needed */
+  bottom: -450px; /* Adjust the position as needed */
+}
+
+.xlarge {
+  width: 1200px; /* Adjust the size as needed */
+  height: 1200px; /* Adjust the size as needed */
+  left: -600px; /* Adjust the position as needed */
+  bottom: -600px; /* Adjust the position as needed */
+}
+
+.xxlarge {
+  width: 1500px; /* Adjust the size as needed */
+  height: 1500px; /* Adjust the size as needed */
+  left: -750px; /* Adjust the position as needed */
+  bottom: -750px; /* Adjust the position as needed */
+}
+
+.shade1 {
+  opacity: 0.2;
+}
+
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.8;
+}
+
+.shade5 {
+  opacity: 0.9;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+
+
+
+
+
+
+
+
+.shade1{
+  opacity: 0.2;
+}
+.shade2{
+  opacity: 0.5;
+}
+
+.shade3{
+  opacity: 0.7;
+}
+
+.shade4{
+  opacity: 0.8;
+}
+
+.shade5{
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
 }
