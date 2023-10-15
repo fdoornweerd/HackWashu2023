@@ -6,6 +6,10 @@ import { languages } from '../languages';
 import { interests } from '../interests';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserService } from '../user.service';
+import { User } from '../user';
+import { tap, switchMap } from 'rxjs/operators';
+import { forkJoin, of } from 'rxjs';
 
 
 @Component({
@@ -19,6 +23,7 @@ export class EditprofileComponent implements OnInit {
   userId: string | null = null;
   languageOptions: string[] = languages;
   interestOptions: string[] = interests;
+  nothing: any[] = [];
 
   profileEditForm = new FormGroup({
     email: new FormControl(),
@@ -35,7 +40,8 @@ export class EditprofileComponent implements OnInit {
   showLearningDropdown = false;
   showInterestDropdown = false;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  //constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private userService: UserService) {}
 
   ngOnInit() {
     this.authService.token$.subscribe((token) => {
@@ -112,6 +118,21 @@ export class EditprofileComponent implements OnInit {
     console.log(userData);
 
     
+  }
+
+  getUserInfoForRecommendations() {
+    if (this.nothing && this.nothing.length > 0) {
+      const userInfoObservables = this.nothing.map((userId) =>
+        this.userService.getUserInfo(userId).pipe(
+          tap((response: any) => {
+            console.log('User info retrieved for user ID:', userId, response);
+          })
+        )
+      );
+      return forkJoin(userInfoObservables);
+    } else {
+      return of([]);
+    }
   }
 
   
