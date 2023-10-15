@@ -142,6 +142,50 @@ router.get('/user/:id', async (req, res) => {
 });
 
 
+router.get('/get-recommendations/:id', async (req, res) => {
+  try {
+    const userId = req.params.id;
+
+    const { data, error } = await supabase
+      .rpc('run_sql', { sql: userComparisonQuery, params: { userId: userId } });
+
+    if (error) {
+      return res.status(500).json({ error: 'Server error' });
+    }
+
+    if (data) {
+      return res.status(200).json({ recommendations: data });
+    } else {
+      return res.status(404).json({ error: 'Recommendation data not found' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+const userComparisonQuery = `
+    SELECT
+        ui1.user_id AS user_id_1,
+        ui2.user_id AS user_id_2,
+        array_to_string(ui1.proficient_languages, ', ') AS user1_proficient_languages,
+        array_to_string(ui1.learning_languages, ', ') AS user1_learning_languages,
+        array_to_string(ui2.proficient_languages, ', ') AS user2_proficient_languages,
+        array_to_string(ui2.learning_languages, ', ') AS user2_learning_languages
+    FROM public.user_info ui1
+    JOIN public.user_info ui2
+    ON ui1.user_id = $userId
+    AND ui1.user_id <> ui2.user_id
+    AND (
+        ui1.proficient_languages && ui2.learning_languages
+        AND ui1.learning_languages && ui2.proficient_languages
+    )
+    ORDER BY
+        user1_proficient_languages,
+        user1_learning_languages,
+        user2_proficient_languages,
+        user2_learning_languages;
+`;
 
 
 
