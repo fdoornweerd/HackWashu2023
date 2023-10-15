@@ -1,1 +1,12 @@
-<p>chat-page works!</p>
+<div>{{request}}</div>
+<div style="height:50%;">
+    <app-chat-response *ngFor="let response of previousResponses"
+        [message]="response"
+    ></app-chat-response>
+    </div>
+
+<div class="chat-input">
+    <input type="text" placeholder="Type your message here..." id="inputField" [(ngModel)]="inputValue"  (keyup.enter)="getInfo()" name="inputField" class="input-field">
+</div>
+
+
