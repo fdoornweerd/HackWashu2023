@@ -12,3 +12,8 @@
 - Duolingo API
 - Resources for more help
 - 
+
+# TODO
+- Fix Edit Profile (can essentially be copy of profile set up)
+- Edit profile communication with database
+- Back arrows? Consider all navigation scenarios
