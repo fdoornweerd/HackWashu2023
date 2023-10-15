@@ -4,7 +4,6 @@ import { Person } from '../Person';
 import { NgFor } from '@angular/common';
 import { HoldGlobalsService } from '../hold-globals.service';
 
-
 @Component({
   selector: 'app-people-container',
   standalone: true,
@@ -16,7 +15,11 @@ export class PeopleContainerComponent {
   matches: Person[] = [];
 
   constructor(private holdGlobal:HoldGlobalsService) {
-    this.matches = holdGlobal.getMatches();
+    this.holdGlobal.getMatches().subscribe(
+      (matches: Person[]) => {
+        this.matches = matches;
+      }
+    );
   }
 
 

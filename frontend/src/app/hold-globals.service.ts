@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Person } from './Person';
-
+import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -26,16 +26,16 @@ export class HoldGlobalsService {
     }
   }
 
-  setMatches(value: Person[]) {
-    this.matches = value;
+  setMatches(values: Person[]) {
+    this.matches = values;
   }
 
-  getMatches() {
-    return this.matches;
+  getMatches(): Observable<Person[]> {
+    return of(this.matches);
   }
 
   addMatch(id: number) {
 
   }
-  
+
 }

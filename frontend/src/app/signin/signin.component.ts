@@ -29,7 +29,12 @@ export class SigninComponent {
 //------------
 
 
-  constructor(private authService: AuthService, private router: Router, private holdGlobalsService: HoldGlobalsService) { }
+  constructor(private authService: AuthService, private router: Router, private holdGlobalsService: HoldGlobalsService) { 
+
+    /// DETETE THIS WHEN DB IS UP
+    this.setInformation()
+
+  }
 
   signIn() {
     console.log('Signing in user');
