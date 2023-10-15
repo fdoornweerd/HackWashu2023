@@ -34,16 +34,16 @@ export class RecommendationsComponent {
   
   moveToMatches() {
     
-    //this.moveToMatchesEvent.emit();
-    //this.remove.emit();
-    this.holdGlobalsService.removePerson(this.id);
-    this.holdGlobalsService.addMatch(this.id);
+    // //this.moveToMatchesEvent.emit();
+    // //this.remove.emit();
+    // this.holdGlobalsService.removePerson(this.id);
+    // this.holdGlobalsService.addMatch(this.id);
   }
 
   removeRecommendation() {
 
-    //this.remove.emit();
-    this.holdGlobalsService.removePerson(this.id);
+    // //this.remove.emit();
+    // this.holdGlobalsService.removePerson(this.id);
 
   }
 
