@@ -12,9 +12,9 @@ body, h1, h2, p, ul, button {
     
     /* Home Container Styles */
     .home-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
+      max-width: none;
+      margin: 0;
+      padding: 0px;
     }
     
     /* Alternating Background Boxes */
@@ -35,7 +35,7 @@ body, h1, h2, p, ul, button {
     }
     
     .home-container .box {
-      background-color: #000;
+      background-color: #000000;
       color: #fff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
     }
