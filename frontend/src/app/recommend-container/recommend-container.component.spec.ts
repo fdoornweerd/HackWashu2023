@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Person } from '../Person';
 import { RecommendContainerComponent } from './recommend-container.component';
 
 describe('RecommendContainerComponent', () => {
@@ -18,4 +18,6 @@ describe('RecommendContainerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+
 });

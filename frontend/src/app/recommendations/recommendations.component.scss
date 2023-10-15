@@ -12,6 +12,7 @@
   right: 5px;
   display: flex; /* Make the icons display as flex items */
   flex-direction: row; /* Arrange them horizontally */
+  z-index: 1;
 }
 
 .remove,

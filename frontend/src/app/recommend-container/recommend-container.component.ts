@@ -43,7 +43,20 @@ export class RecommendContainerComponent {
     
     this.people.push(person1);
     this.people.push(person2);
+
+    
+  }
+  removeRecommendation(person: Person) {
+    // Find the index of the person in the array
+    const index = this.people.indexOf(person);
+
+    // If the person is found in the array, remove them
+    if (index !== -1) {
+      this.people.splice(index, 1);
+    }
   }
 
 
 }
+
+
