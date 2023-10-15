@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class ='recommend-container'>
     <app-recommendations *ngFor="let person of people" 
         [firstName]="person.firstName" 
@@ -12,12 +11,7 @@
         ></app-recommendations>
 </div>
 <div *ngFor="let person of people">
-    <app-recommendations
-=======
-
-<div class = "recommend-container">
-    <app-recommendations *ngFor="let person of people"
->>>>>>> 42ae069 (gggg)
+    <app-recommendations>
       [firstName]="person.firstName"
       [lastName]="person.lastName"
       [age]="person.age"
@@ -26,5 +20,5 @@
       [interests]="person.interests"
       [bio]="person.bio"
       (remove)="removeRecommendation(person)"
-    ></app-recommendations>
+    </app-recommendations>
   </div>
