@@ -1,69 +1,55 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #3399ff; /* Blue background color */
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+  }
 
-.profile-setup-container {
-  background-color: #fff;
-  border: 2px solid #007BFF; /* Blue border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match the subtle box shadow */
-}
+  .profile-setup-container {
+    background-color: #fff;
+    border: 2px solid #00a859; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  }
 
-.profile-setup-container h2 {
-  color: #007BFF; /* Blue color */
-}
+  .profile-setup-container h2 {
+    color: #00a859; /* Green color */
+  }
 
-.form-group {
-  margin: 20px 0;
-}
+  .form-group {
+    margin: 10px 0;
+  }
 
-label {
-  display: block;
-  font-weight: bold;
-}
+  label {
+    display: block;
+    font-weight: bold;
+  }
 
-input {
-  width: 100%;
-  padding: 20px; /* Increased padding for more spacing */
-  margin-top: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s;
-}
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-/* Highlight input on focus */
-input:focus {
-  border-color: #007BFF; /* Blue border color on focus */
-}
+  button {
+    background-color: #00a859; /* Green button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-button {
-  background-color: #007BFF; /* Blue button color */
-  color: #fff;
-  padding: 20px 40px; /* Increased padding for more spacing */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
-  font-weight: bold;
-}
-
-/* Add hover effect for the button */
-button:hover {
-  background-color: #0056b3; /* Darker blue color on hover */
-  transition: background-color 0.3s;
-}
-
-.custom-dropdown {
-  position: relative;
-  width: 100%;
+  .custom-dropdown {
+    position: relative;
+    width: 100%;
 }
 
 // .selected-options {
