@@ -3,8 +3,8 @@
       <div class="remove" (click)="removeRecommendation()">&#10006;</div>
       <div class="approve" (click)="moveToMatches()">&#10004;</div> 
     </div>
-    <h1>{{ firstName }} {{ lastName }}, {{ age }}</h1>
-    <h3>Proficient Languages: {{ proficient }}, Learning Languages: {{ learning }}</h3>
-    <p>Interests: {{ interests }}</p>
-    <p>Bio: {{ bio }}</p>
+    <h1>{{ user.age }}</h1>
+    <h3>Proficient Languages: {{ user.proficient_languages }}, Learning Languages: {{ user.learning_languages }}</h3>
+    <p>Interests: {{ user.interests }}</p>
+
   </div>

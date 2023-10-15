@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-recommendations',
@@ -12,13 +13,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./recommendations.component.scss']
 })
 export class RecommendationsComponent {
-  @Input() firstName: string = '';
-  @Input() lastName: string = '';
-  @Input() age: number = 0;
-  @Input() proficient: string[] = [];
-  @Input() learning: string[] = [];
-  @Input() interests: string[] = [];
-  @Input() bio: string = '';
+  @Input() user!: User;
+
+
+  // @Input() firstName: string = '';
+  // @Input() lastName: string = '';
+  // @Input() age: number | null = null;
+  // @Input() proficient: string[] | null= null;
+  // @Input() learning: string[] | null = null;
+  // @Input() interests: string[] | null = null;
+  //@Input() bio: string = '';
 
   
   @Output() remove: EventEmitter<void> = new EventEmitter<void>();
