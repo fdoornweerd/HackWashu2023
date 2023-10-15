@@ -11,6 +11,8 @@ import { AiChatComponent } from '../ai-chat/ai-chat.component';
   templateUrl: './hub.component.html',
   styleUrls: ['./hub.component.scss']
 })
+
+
 export class HubComponent {
 
 }

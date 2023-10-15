@@ -24,10 +24,7 @@ export class RecommendationsComponent {
   @Output() remove: EventEmitter<void> = new EventEmitter<void>();
   @Output() moveToMatchesEvent: EventEmitter<void> = new EventEmitter<void>();
 
-  removeRecommendation() {
-    
-    this.remove.emit();
-  }
+  
 
   
   moveToMatches() {
