@@ -40,7 +40,7 @@ export class ViewPersonComponent {
     blurb: 'Love learning CS and meeting new people!',
     bio: "My name is Sylvia Kozub, and I'm a 20-year-old with an insatiable curiosity and an unending enthusiasm for life. I come from a diverse linguistic background, which has allowed me to become proficient in both English and Polish. This love for languages has been a gateway to understanding and connecting with people from all walks of life. Currently, I'm on a journey to master Spanish, broadening my horizons and embracing the rich tapestry of the Spanish-speaking world. One of my greatest passions in life is programming. To me, it's not just a subject of study; it's an integral part of who I am. I find immense joy in deciphering the intricate codes of the digital world. The endless possibilities that technology offers excite me, and I'm always on the lookout for new challenges and innovations in the ever-evolving tech landscape. While I'm deeply immersed in the world of coding, I also have a surprising love for sports. Cricket and golf might seem like an unusual combination, but they reflect my versatility. Cricket, with its strategic complexities, piques my interest, and I enjoy watching and playing the sport whenever I can. On the other hand, golf offers me tranquility and a chance to connect with nature on the lush greens of the course.",
     email: 'sylviakozub@gmail.com',
-    number: '224-808-2366',
+    number: '708-439-5595',
     id: 10
   };
 
@@ -89,6 +89,16 @@ export class ViewPersonComponent {
   facetime(){
     const facetimeURL = 'facetime://'+this.phone; 
     window.open(facetimeURL);
+  }
+
+
+  accept(){
+
+  }
+
+  reject(){
+
+
   }
 
 

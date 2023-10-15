@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+import { HoldGlobalsService } from '../hold-globals.service';
+
 @Component({
   selector: 'app-recommendations',
   standalone: true,
@@ -22,22 +24,25 @@ export class RecommendationsComponent {
   @Input() id: number = 0;
   contact: boolean = false;
 
+  constructor(private holdGlobalsService: HoldGlobalsService) { }
   
   @Output() remove: EventEmitter<void> = new EventEmitter<void>();
   @Output() moveToMatchesEvent: EventEmitter<void> = new EventEmitter<void>();
 
   
-
-  
   moveToMatches() {
     
     //this.moveToMatchesEvent.emit();
-    this.remove.emit();
+    //this.remove.emit();
+    this.holdGlobalsService.removePerson(this.id);
+    this.holdGlobalsService.addMatch(this.id);
   }
 
   removeRecommendation() {
 
-    this.remove.emit();
+    //this.remove.emit();
+    this.holdGlobalsService.removePerson(this.id);
+
   }
 
 
