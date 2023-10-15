@@ -81,7 +81,7 @@ try {
     const { username, password } = req.body;
 
     // Fetch user data from the Supabase user table by email
-    const { error } = await supabase
+    const { data, error } = await supabase
     .from('user')
     .select('*')
     .eq('username', username);
