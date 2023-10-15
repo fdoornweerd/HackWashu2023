@@ -32,6 +32,11 @@ export class RecommendationsComponent {
     this.moveToMatchesEvent.emit();
   }
 
+  removeRecommendation() {
+
+    this.remove.emit();
+  }
+
 
 }
 
