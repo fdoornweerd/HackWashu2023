@@ -13,7 +13,7 @@
         <p>(You would be comfortable acting as a mentor for this language)</p>
         <div class="custom-dropdown">
             <div class="selected-options" (click)="toggleProficientDropdown()">
-                <div *ngFor="let language of selectedProficientLanguages" (click)="removeProficientLanguage(language)">
+                <div style = 'margin-left:4.3%;' *ngFor="let language of selectedProficientLanguages" (click)="removeProficientLanguage(language)">
                     {{ language }}
                 </div>
                 <button id="selectedProficientLanguages">Show Languages</button>
@@ -22,7 +22,7 @@
             <ng-container *ngIf="showProficientDropdown">
                 <div class="options">
                     
-                    <select style = "margin-left : 5%;"id="proficientLanguages" formControlName="proficientLanguages" multiple>
+                    <select style = "margin-left : 4%; margin-top:1%;"id="proficientLanguages" formControlName="proficientLanguages" multiple>
                         <option *ngFor="let language of languageOptions" [value]="language" (click)="addProficientLanguage(language)">{{ language }}</option>
                     </select>
                 </div>
@@ -33,7 +33,7 @@
         <h4>What language(s) are you trying to learn?</h4>
         <div class="custom-dropdown">
             <div class="selected-options" (click)="toggleLearningDropdown()">
-                <div *ngFor="let language of selectedLearningLanguages" (click)="removeLearningLanguage(language)">
+                <div style = 'margin-left:4.3%;' *ngFor="let language of selectedLearningLanguages" (click)="removeLearningLanguage(language)">
                     {{ language }}
                 </div>
                 <button  id="selectedLearningLanguages">Show Languages</button>
@@ -42,7 +42,7 @@
             <ng-container *ngIf="showLearningDropdown">
                 <div class="options">
                     
-                    <select style = "margin-left : 5%;"id="learningLanguages" formControlName="proficientLanguages" multiple>
+                    <select style = "margin-left : 4%; margin-top:1%;"id="learningLanguages" formControlName="proficientLanguages" multiple>
                         <option *ngFor="let language of languageOptions" [value]="language" (click)="addLearningLanguage(language)">{{ language }}</option>
                     </select>
                 </div>
@@ -52,7 +52,7 @@
         <h4>Select some of your interests. We'll try to recommend people who want to talk about what you want to talk about!</h4>
         <div class="custom-dropdown">
             <div class="selected-options" (click)="toggleInterestDropdown()">
-                <div *ngFor="let interest of selectedInterests" (click)="removeInterest(interest)">
+                <div style = 'margin-left:4.3%;' *ngFor="let interest of selectedInterests" (click)="removeInterest(interest)">
                     {{ interest }}
                 </div>
                 <button id="selectedInterests">Show Interests</button>
@@ -61,7 +61,7 @@
             <ng-container *ngIf="showInterestDropdown">
                 <div class="options">
                     
-                    <select stylye = "margin-left : 5%;"id="interests" formControlName="interests" multiple>
+                    <select style = "margin-left : 1%; margin-top:1%;" id="interests" formControlName="interests" multiple>
                         <option *ngFor="let interest of interestOptions" [value]="interest" (click)="addInterest(interest)">{{ interest }}</option>
                     </select>
                 </div>
