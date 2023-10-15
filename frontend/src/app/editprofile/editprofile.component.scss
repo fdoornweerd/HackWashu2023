@@ -8,14 +8,8 @@ body {
   font-family: Andika, sans-serif;
   /* Blue background color for the entire page */
 }
-p {
-  font-family: Andika, sans-serif;
-}
-h4 {
-  font-family: Andika, sans-serif;
-}
-h2 {
-  font-family: Andika, sans-serif;
+body, h2, h4, p, input, select, button {
+  font-family: 'Andika', sans-serif;
 }
 .profile-setup-container {
   position: absolute;
