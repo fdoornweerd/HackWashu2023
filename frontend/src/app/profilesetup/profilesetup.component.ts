@@ -24,6 +24,7 @@ export class ProfilesetupComponent implements OnInit{
   interestOptions: string[] = interests;
 
   profileSetupForm = new FormGroup({
+    email: new FormControl(''),
     age: new FormControl(''),
     proficientLanguages: new FormControl([]), // Capture selected proficient languages
     learningLanguages: new FormControl([]),   // Capture selected learning languages
@@ -113,6 +114,7 @@ toggleInterestDropdown() {
     console.log('Setting up profile');
     const userData = {
       user_id: this.userId,
+      email: this.profileSetupForm.value.email,
       age: this.profileSetupForm.value.age,
       proficientLanguages: this.selectedProficientLanguages,
       learningLanguages: this.selectedLearningLanguages,

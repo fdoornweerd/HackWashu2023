@@ -2,6 +2,9 @@
     <h2>Tell us more about you!</h2>
     <form form [formGroup]="profileSetupForm" (submit)="profileSetup()">
         
+        <h4>Email</h4>
+        <input type="text" placeholder="Email" formControlName="email" name="email" required>
+
         <h4>Age</h4>
         <input type="text" placeholder="Age" formControlName="age" name="age" required>
         

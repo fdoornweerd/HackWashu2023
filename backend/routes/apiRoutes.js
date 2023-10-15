@@ -10,7 +10,7 @@ const config = require('../middleware/config');
 router.post('/signup', async (req, res) => {
     try {
       console.log(req.body);
-      const { username, email, password } = req.body;
+      const { username, password } = req.body;
   
       // Hash the user's password before saving it to the database
       const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of hashing rounds
@@ -19,7 +19,7 @@ router.post('/signup', async (req, res) => {
       const { data, error } = await supabase
       .from('user')
       .insert(
-        { username: username, password: hashedPassword, email: email }
+        { username: username, password: hashedPassword}
       )
       .select('id');
 
@@ -51,14 +51,14 @@ router.post('/signup', async (req, res) => {
   router.post('/profilesetup', async (req, res) => {
     try {
       console.log(req.body);
-      const { user_id, age, proficientLanguages, learningLanguages, interests } = req.body;
+      const { user_id, email, age, proficientLanguages, learningLanguages, interests } = req.body;
   
   
       // Insert the user data into your Supabase user table
       const { error } = await supabase
       .from('user_info')
       .insert(
-        { user_id: user_id, age: age, proficient_languages: proficientLanguages, learning_languages: learningLanguages, interests: interests }
+        { user_id: user_id, email: email, age: age, proficient_languages: proficientLanguages, learning_languages: learningLanguages, interests: interests }
       )
 
   
@@ -112,6 +112,37 @@ try {
     res.status(500).json({ error: 'Server error' });
 }
 });
+
+router.get('/user/:id', async (req, res) => {
+  try {
+    const userId = req.params.id;
+  
+    // Fetch user data from your Supabase user table based on the user's ID
+    const { data, error } = await supabase
+      .from('user_info')
+      .select('email', 'age', 'proficient_languages', 'learning_languages', 'interests') // Include the fields you want to retrieve
+      .eq('user_id', userId);
+
+    if (error) {
+      return res.status(500).json({ error: 'Server error' });
+    }
+
+    // Check if a user with the given ID exists
+    if (data && data.length > 0) {
+      const user = data[0];
+
+      // Return user information in the response
+      return res.status(200).json({ user });
+    } else {
+      // User not found
+      return res.status(404).json({ error: 'User not found' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 
 
 module.exports = router;

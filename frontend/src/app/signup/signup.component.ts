@@ -18,7 +18,6 @@ export class SignupComponent {
 
   registrationForm = new FormGroup({
     username: new FormControl(''),
-    email: new FormControl(''),
     password: new FormControl('')
   });
 
@@ -29,7 +28,6 @@ export class SignupComponent {
     console.log('Registering user');
     const userData = {
       username: this.registrationForm.value.username,
-      email: this.registrationForm.value.email,
       password: this.registrationForm.value.password
       // Add other user registration data fields
     };
