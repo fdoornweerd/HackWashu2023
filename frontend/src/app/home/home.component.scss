@@ -62,6 +62,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Containers for About Us, Discover, Testimonials, and Contact */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -70,8 +71,9 @@ body {
   margin-top: 200px; /* Adjusted margin to create space below the fixed top */
   padding: 20px; /* Add padding for spacing */
 }
+
 .box {
-  width: calc(95% - 70px); /* Adjusted width for 3 columns with margin */
+  width: calc(33.33% - 20px); /* Adjusted width for 3 columns with margin */
   padding: 20px; /* Add padding for spacing */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -80,25 +82,28 @@ body {
   color: #000;
   transition: transform 0.3s, box-shadow 0.3s;
   margin-bottom: 20px; /* Add margin at the bottom for spacing */
-  text-align: center;
-  height: 300px;
 }
+
 
 /* Center the containers */
-.containers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the containers horizontally */
-  align-items: center; /* Center the containers vertically */
-  margin-top: 400px; /* Adjusted margin to create space below the fixed top */
-  width: 100%;
+
+  .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the containers horizontally */
+    align-items: center; /* Center the containers vertically */
+    margin-top: 60px; /* Adjusted margin to create space below the fixed top */
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+  }
+
+
+
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
-
-
-// .box:hover {
-//   transform: translateY(-5px);
-//   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-// }
 
 /* Add specific styles for each container if needed */
 .about-us h2,
