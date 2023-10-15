@@ -172,6 +172,58 @@ router.get('/get-recommendations/:id', async (req, res) => {
   }
 });
 
+
+router.post('/like-user/:userId/:likedUserId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    const likedUserId = req.params.likedUserId;
+
+    // Define the data to be inserted into the user_likes table
+    const likeData = {
+      user_id: userId,
+      liked_user_id: likedUserId,
+    };
+    console.log(likeData);
+
+    // Perform the insert operation
+    const { data, error } = await supabase
+      .from('user_likes')
+      .upsert([likeData]);
+
+    if (error) {
+      console.error('Error inserting like:', error);
+      return res.status(500).json({ error: 'Like operation failed' });
+    }
+
+    // Check for mutual likes by querying the user_likes table
+    const { data: mutualLikes, error: mutualLikesError } = await supabase
+      .from('user_likes')
+      .select('user_id')
+      .eq('user_id', likedUserId)
+      .eq('liked_user_id', userId);
+
+    if (mutualLikesError) {
+      console.error('Error checking mutual likes:', mutualLikesError);
+      return res.status(500).json({ error: 'Mutual likes check failed' });
+    }
+
+    if (mutualLikes && mutualLikes.length > 0) {
+      // Mutual like found, create a match
+      // You can insert a record into your matches table or perform any other necessary actions
+
+      // Respond to the client with a success message indicating a match
+      return res.status(200).json({ message: 'Mutual like and match found' });
+    }
+
+    // Respond to the client with a success message for the like
+    return res.status(200).json({ message: 'Like operation successful' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+
 const recommendationsQuery = `
     SELECT
         ui1.user_id AS user_id_1,

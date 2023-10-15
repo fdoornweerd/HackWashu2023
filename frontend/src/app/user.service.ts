@@ -34,6 +34,17 @@ export class UserService {
       })
     );
   }
+
+  likeUser(userId: number, likedUserId: number): Observable<any> {
+    const url = `${this.apiUrl}/like-user/${userId}/${likedUserId}`;
+
+    return this.http.post(url, null).pipe(
+      tap(response => {
+        // You can perform additional actions here based on the response
+        console.log('User liked successfully', response);
+      })
+    );
+  }
   
   
 
