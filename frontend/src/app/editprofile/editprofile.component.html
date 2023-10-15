@@ -3,7 +3,7 @@
     <form [formGroup]="profileEditForm" (submit)="editProfile()">
         
         <h4>Email</h4>
-        <input type="text" placeholder="email" formControlName="email" name="email" required>
+        <input type="text" placeholder= {{firstName}} formControlName="email" name="email" required>
 
         <h4>Age</h4>
         <input type="text" placeholder="age" formControlName="age" name="age" required>

@@ -25,6 +25,8 @@ export class EditprofileComponent implements OnInit {
   interestOptions: string[] = interests;
   nothing: any[] = [];
 
+  firstName: string = 'finn';
+
   profileEditForm = new FormGroup({
     email: new FormControl(),
     age: new FormControl(''),
@@ -120,7 +122,7 @@ export class EditprofileComponent implements OnInit {
     
   }
 
-  getUserInfoForRecommendations() {
+  getUserInfoForPlaceholder() {
     if (this.nothing && this.nothing.length > 0) {
       const userInfoObservables = this.nothing.map((userId) =>
         this.userService.getUserInfo(userId).pipe(
