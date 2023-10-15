@@ -116,11 +116,11 @@ try {
 router.get('/user/:id', async (req, res) => {
   try {
     const userId = req.params.id;
-  
-    // Fetch user data from your Supabase user table based on the user's ID
+
+    // Fetch user data from your Supabase user_info table based on the user's ID
     const { data, error } = await supabase
       .from('user_info')
-      .select('email', 'age', 'proficient_languages', 'learning_languages', 'interests') // Include the fields you want to retrieve
+      .select('email, age, proficient_languages,learning_languages, interests') // Include the fields you want to retrieve
       .eq('user_id', userId);
 
     if (error) {
@@ -128,11 +128,9 @@ router.get('/user/:id', async (req, res) => {
     }
 
     // Check if a user with the given ID exists
-    if (data && data.length > 0) {
-      const user = data[0];
-
+    if (data) {
       // Return user information in the response
-      return res.status(200).json({ user });
+      return res.status(200).json({ user: data });
     } else {
       // User not found
       return res.status(404).json({ error: 'User not found' });
@@ -142,6 +140,8 @@ router.get('/user/:id', async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+
+
 
 
 
