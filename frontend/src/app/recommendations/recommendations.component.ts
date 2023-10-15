@@ -29,7 +29,8 @@ export class RecommendationsComponent {
   
   moveToMatches() {
     
-    this.moveToMatchesEvent.emit();
+    //this.moveToMatchesEvent.emit();
+    this.remove.emit();
   }
 
   removeRecommendation() {
