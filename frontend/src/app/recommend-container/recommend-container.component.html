@@ -7,8 +7,8 @@
         [learning]="person.learning" 
         [interests]="person.interests"
         [bio]="person.bio"
-        (remove)="removeRecommendation(recommendation)"></app-recommendations>
-    ></app-recommendations>
+        (remove)="removeRecommendation(person)"
+        ></app-recommendations>
 </div>
 <div *ngFor="let person of people">
     <app-recommendations
