@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+  }
+
+  .profile-setup-container {
+    background-color: #fff;
+    border: 2px solid #00a859; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  }
+
+  .profile-setup-container h2 {
+    color: #00a859; /* Green color */
+  }
+
+  .form-group {
+    margin: 10px 0;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #00a859; /* Green button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .custom-dropdown {
+    position: relative;
+    width: 100%;
+}

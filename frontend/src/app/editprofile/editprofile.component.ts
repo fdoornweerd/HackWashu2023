@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { languages } from '../languages';
 import { interests } from '../interests';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-editprofile',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './editprofile.component.html',
   styleUrls: ['./editprofile.component.scss']
 })
@@ -16,7 +21,7 @@ export class EditprofileComponent implements OnInit {
   interestOptions: string[] = interests;
 
   profileEditForm = new FormGroup({
-    email: new FormControl(''),
+    email: new FormControl(),
     age: new FormControl(''),
     proficientLanguages: new FormControl([]),
     learningLanguages: new FormControl([]),
@@ -108,4 +113,6 @@ export class EditprofileComponent implements OnInit {
 
     
   }
+
+  
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'hub', component: HubComponent},
   { path: 'profilesetup', component: ProfilesetupComponent},
-  { path: 'editprofile', component: EditprofileComponent},
+  { path: 'editprofile', component: EditprofileComponent },
   { path: 'chatpage', component: ChatPageComponent},
   { path: 'viewperson', component: ViewPersonComponent},
 ];
