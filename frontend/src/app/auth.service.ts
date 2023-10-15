@@ -4,7 +4,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { tap } from 'rxjs/operators';
 
-
+interface SignInResponse {
+  message: string;
+  token: string;
+  // Add other properties if they exist in the response
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +19,9 @@ export class AuthService {
   isLoggedIn$ = this.isLoggedInSubject.asObservable();
   private tokenSubject: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
   token$: Observable<string | null> = this.tokenSubject.asObservable();
+
+
+
 
   constructor(private http: HttpClient, private jwtHelper: JwtHelperService) {
     const isLoggedIn = !!localStorage.getItem('authToken');
@@ -36,15 +43,23 @@ export class AuthService {
     );
 }
 
+  // User sign-in
+  signInUser(credentials: any): Observable<SignInResponse> {
+    return this.http.post<SignInResponse>(`${this.apiUrl}/signin`, credentials).pipe(
+      tap(response => {
+        const token = response.token;
+        localStorage.setItem('authToken', token);
+        this.isLoggedInSubject.next(true);
+        this.tokenSubject.next(token); // Set the token in the tokenSubject
+      })
+    );
+  }
 
   profileSetup(userData: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/profilesetup`, userData);
   }
 
-  // User sign-in
-  signInUser(credentials: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/signin`, credentials);
-  }
+
 
   getToken(): string | null {
     return localStorage.getItem('authToken');

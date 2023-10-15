@@ -98,10 +98,15 @@ try {
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (passwordMatch) {
-        // User is authenticated, and you can generate an authentication token here
-        // Typically, you would use a JWT (JSON Web Token) for this purpose
-        // Return the token in the response
-        return res.status(200).json({ message: 'User signed in successfully', token: 'YOUR_AUTH_TOKEN' });
+      // User is authenticated, and you can generate an authentication token here
+      const tokenUser = { userId: user.id, username: user.username };
+
+      const token = jwt.sign(tokenUser, config.secretKey, { expiresIn: '1h' });
+
+      return res.status(201).json({
+        message: 'User signed in successfully',
+        token: token
+      });
     }
     }
 
