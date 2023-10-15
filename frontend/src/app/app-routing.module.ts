@@ -6,6 +6,7 @@ import { HubComponent } from './hub/hub.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfilesetupComponent } from './profilesetup/profilesetup.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'hub', component: HubComponent},
   { path: 'profilesetup', component: ProfilesetupComponent},
+  { path: 'editprofile', component: EditprofileComponent},
   { path: 'chatpage', component: ChatPageComponent}
 ];
 
