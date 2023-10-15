@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ProfilesetupComponent } from './profilesetup/profilesetup.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
+import { ViewPersonComponent } from './view-person/view-person.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'hub', component: HubComponent},
   { path: 'profilesetup', component: ProfilesetupComponent},
   { path: 'editprofile', component: EditprofileComponent},
-  { path: 'chatpage', component: ChatPageComponent}
+  { path: 'chatpage', component: ChatPageComponent},
+  { path: 'viewperson', component: ViewPersonComponent},
 ];
 
 @NgModule({

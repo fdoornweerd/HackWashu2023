@@ -1,0 +1,17 @@
+<h1>{{firstName}} {{lastName}}, {{age}}</h1>
+<h2>Proficient: {{ proficient }}&nbsp;&nbsp;&nbsp;&nbsp;Learning: {{ learning }}</h2>
+<h3>Interests: {{ interests }}</h3>
+<h3>Blurb: {{ blurb }}</h3>
+<h3>Bio: {{bio}}</h3>
+
+<div class="centered-content" *ngIf="contact">
+    
+    <h2>Email: <a href="mailto:{{email}}">{{email}}</a></h2>
+    <h2>Mobile Number: {{phone}}</h2>
+    <div class="button-container">
+        <button (click) = 'call()' class="round-button">Call</button>
+        <button (click) = 'facetime()' class="round-button">FaceTime</button>
+    </div>
+
+    
+</div>

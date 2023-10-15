@@ -1,0 +1,42 @@
+.centered-content {
+    text-align: center;
+}
+
+.round-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 130px;
+    height: 80px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Add margin to separate the buttons */
+}
+
+.round-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    line-height: 1.5;
+}
+
+h3 {
+    text-align: center;
+    line-height: 1.5;
+}

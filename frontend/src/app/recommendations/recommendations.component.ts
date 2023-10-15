@@ -18,7 +18,9 @@ export class RecommendationsComponent {
   @Input() proficient: string[] = [];
   @Input() learning: string[] = [];
   @Input() interests: string[] = [];
-  @Input() bio: string = '';
+  @Input() blurb: string = '';
+  @Input() id: number = 0;
+  contact: boolean = false;
 
   
   @Output() remove: EventEmitter<void> = new EventEmitter<void>();
