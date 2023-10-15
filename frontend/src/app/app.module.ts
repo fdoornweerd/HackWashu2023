@@ -11,6 +11,7 @@ import { SigninComponent } from './signin/signin.component';
 import { PeopleContainerComponent } from './people-container/people-container.component';
 import { SignupComponent } from './signup/signup.component';
 import { MatchesComponent } from './matches/matches.component';
+import { AiChatComponent } from './ai-chat/ai-chat.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -18,7 +19,7 @@ export function tokenGetter() {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [ MatchesComponent,SignupComponent, PeopleContainerComponent, SigninComponent, BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
+  imports: [ MatchesComponent,SignupComponent,SigninComponent, PeopleContainerComponent, SignupComponent, MatchesComponent, AiChatComponent, SigninComponent, BrowserModule, FormsModule, AppRoutingModule, HttpClientModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
