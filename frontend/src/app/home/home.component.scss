@@ -5,11 +5,7 @@ body, h1, h2, p, ul, button {
 }
 
 /* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2; /* Light gray background */
-  margin: 0; /* Reset body margin */
-}
+
 
 /* Main Container Styles */
 .main-container {
@@ -68,49 +64,46 @@ body {
   flex-wrap: wrap;
   justify-content: center; /* Center the boxes horizontally */
   align-items: center; /* Center the boxes vertically */
-  margin-top: 200px; /* Adjusted margin to create space below the fixed top */
-  padding: 20px; /* Add padding for spacing */
+  margin-top: 30px; /* Adjusted margin to create space below the fixed top */
+  padding: 20px;
 }
 
 .box {
-  width: calc(33.33% - 20px); /* Adjusted width for 3 columns with margin */
-  padding: 20px; /* Add padding for spacing */
+  width: calc(95% - 40px); /* Adjusted width for 3 columns with margin */
+  padding: 100px; /* Increased padding for more height */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: left;
   background-color: #fff;
   color: #000;
   transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  margin-bottom: 30px; /* Add margin at the bottom for spacing */
+  height: auto; /* Add margin at the bottom for spacing */
 }
-
 
 /* Center the containers */
 
-  .containers {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the containers horizontally */
-    align-items: center; /* Center the containers vertically */
-    margin-top: 60px; /* Adjusted margin to create space below the fixed top */
-    width: 100%;
-    height: 400px; /* Adjust the height as needed */
-  }
-
-
-
+/* Center the containers */
+.containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the containers horizontally */
+  align-items: center; /* Center the containers vertically */
+  margin-top: 365px; /* Adjusted margin to create space below the fixed top */
+  width: 100%;
+}
 
 .container:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Add specific styles for each container if needed */
+/* Increase the font size for specific container headings */
 .about-us h2,
 .features h2,
-.testimonials h2,
+.testimonial h2,
 .contact h2 {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Adjust the font size as needed */
 }
 
 /* Responsive adjustments as needed */
@@ -119,6 +112,7 @@ body {
     width: calc(100% - 20px); /* Full width on smaller screens */
   }
 }
+
 
     
     
