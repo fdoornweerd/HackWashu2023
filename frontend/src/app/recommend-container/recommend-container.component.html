@@ -10,15 +10,4 @@
         (remove)="removeRecommendation(person)"
         ></app-recommendations>
 </div>
-<div *ngFor="let person of people">
-    <app-recommendations>
-      [firstName]="person.firstName"
-      [lastName]="person.lastName"
-      [age]="person.age"
-      [proficient]="person.proficient"
-      [learning]="person.learning"
-      [interests]="person.interests"
-      [bio]="person.bio"
-      (remove)="removeRecommendation(person)"
-    </app-recommendations>
-  </div>
+
