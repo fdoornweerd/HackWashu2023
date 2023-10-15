@@ -1,169 +1,119 @@
 body, h1, h2, p, ul, button {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Global styles */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2; /* Light gray background */
-    }
-    
-    /* Home Container Styles */
-    .home-container {
-      max-width: none;
-      margin: 0;
-      padding: 0px;
-    }
-    
-    /* Alternating Background Boxes */
-    .home-container .box,
-    .home-container .box-white {
-      padding: 40px;
-      border-radius: 8px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      margin: 0 auto; /* Horizontally center the buttons */
-  display: block;
-    }
-    
-    .home-container .box-white {
-      width: 50%; /* Set white boxes to 50% width */
-      background-color: #fff;
-      color: #000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    }
-    
-    .home-container .box {
-      background-color: #000000;
-      color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    }
-    
-    .home-container .box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced box shadow on hover */
-    }
-    
-    /* Hero Section Styles */
-    .hero .box {
-      width: 100%; /* Set to 100% for full width */
-      padding: 100px 0; /* Adjust padding as needed */
-      margin: 0; /* Remove margin for full width */
-      
-    }
-    
-    .hero h1 {
-      font-size: 6rem; /* Increase font size */
-  margin-bottom: 20px;
-  color: #fff; /* Set title color to white */
-  font-weight: bold; /* Make the title bold */
-  letter-spacing: 2px; /* Add letter spacing for a 3D effect */
-  text-transform: uppercase; /* Uppercase text */
-  text-align: center; /* Center align the text */
-  /* Add text shadow for a shadowy effect */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  /* Add a bubble-like background */
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #007BFF;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-    }
-    
-    
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 40px;
-      color: #fff; /* Maintain text color */
-      text-align: center;
-    }
-    
-    .hero .cta-button {
-      background-color: #007BFF;
-      color: #fff;
-      padding: 20px 40px;
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 30px;
-      text-transform: uppercase;
-      /* Maintain button styles */
-      text-align: center;
-    }
-    
-    /* About Us and Discover Sections */
-    .about-us-and-discover {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-top: 60px;
-      width: 100%;
-    }
-    
-    .about-us,
-    .features {
-      width: calc(50% - 20px); /* Adjusted width with some margin */
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: left; /* Left-align text */
-    }
-    
-    /* Responsive adjustments */
-    @media screen and (max-width: 768px) {
-      .about-us,
-      .features {
-        width: 100%; /* Full width on smaller screens */
-        margin: 20px 0; /* Space above and below on smaller screens */
-      }
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .contact {
-      width: calc(50% - 20px); /* Adjusted width with some margin */
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
-      text-align: left; /* Left-align text */
-      background-color: #fff; /* White background color */
-      color: #000; /* Text color */
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    /* Add a hover effect to white boxes */
-    .contact:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
-    }
-    
-    /* Cool hover effect for white boxes */
-    .box-white:hover {
-      transform: scale(1.05); /* Scale up on hover */
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Slightly more pronounced box shadow on hover */
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Light gray background */
+  margin: 0; /* Reset body margin */
+}
 
-    .home-container .box .cta-button {
-      margin: 20px auto; /* Center horizontally and add margin for spacing */
-      display: block;
-    }
-    
-    
-    
-    
-    
-    
+/* Main Container Styles */
+.main-container {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px; /* Add padding for spacing */
+}
+
+/* Maintain font size from old home containers */
+.main-container h1,
+.main-container h2,
+.main-container p,
+.main-container ul,
+.main-container button {
+  font-size: inherit;
+}
+
+/* Hero Section Styles */
+.main-container h1 {
+  font-family: Andika;
+  font-size: 7rem;
+  text-shadow: 0px 15px 5px rgba(245, 238, 238, 0),
+  10px 20px 5px rgba(252, 251, 251, 0),
+  -10px 20px 5px rgba(251, 249, 249, 0);
+}
+
+.main-container p {
+  font-family: Andika;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.main-container .cta-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the boxes horizontally */
+  align-items: center; /* Center the boxes vertically */
+  margin-top: 200px; /* Adjusted margin to create space below the fixed top */
+  padding: 20px; /* Add padding for spacing */
+}
+.box {
+  width: calc(95% - 70px); /* Adjusted width for 3 columns with margin */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+  text-align: center;
+  height: 300px;
+}
+
+/* Center the containers */
+.containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the containers horizontally */
+  align-items: center; /* Center the containers vertically */
+  margin-top: 400px; /* Adjusted margin to create space below the fixed top */
+  width: 100%;
+}
 
 
+// .box:hover {
+//   transform: translateY(-5px);
+//   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+// }
 
+/* Add specific styles for each container if needed */
+.about-us h2,
+.features h2,
+.testimonials h2,
+.contact h2 {
+  font-size: 2rem;
+}
 
-
-
-    
-    
-    
-    
-    
+/* Responsive adjustments as needed */
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 20px); /* Full width on smaller screens */
+  }
+}
 
     
     
