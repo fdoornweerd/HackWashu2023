@@ -8,6 +8,7 @@
 - API set up
 
 # Nice to haves
+- Create language components for drop down menu
 - In app chat/call
 - Different levels of users (novice, teacher etc...)
 - Incentives:

@@ -1,1 +1,71 @@
-<p>profilesetup works!</p>
+<div class="profile-setup-container">
+    <h2>Tell us more about you!</h2>
+    <form form [formGroup]="profileSetupForm" (submit)="profileSetup()">
+        
+        <h4>Age</h4>
+        <input type="text" placeholder="Age" formControlName="age" name="age" required>
+        
+        <h4>In what languages are you fluent?</h4>
+        <p>(You would be comfortable acting as a mentor for this language)</p>
+        <div class="custom-dropdown">
+            <div class="selected-options" (click)="toggleProficientDropdown()">
+                <div *ngFor="let language of selectedProficientLanguages" (click)="removeProficientLanguage(language)">
+                    {{ language }}
+                </div>
+                <input type="text" id="selectedProficientLanguages"placeholder="Select Proficient Languages" [readonly]="true" />
+            </div>
+            
+            <ng-container *ngIf="showProficientDropdown">
+                <div class="options">
+                    <label for="proficientLanguages">Proficient Languages:</label>
+                    <select id="proficientLanguages" formControlName="proficientLanguages" multiple>
+                        <option *ngFor="let language of languageOptions" [value]="language" (click)="addProficientLanguage(language)">{{ language }}</option>
+                    </select>
+                </div>
+            </ng-container>
+            
+        </div>
+
+        <h4>What language(s) are you trying to learn?</h4>
+        <div class="custom-dropdown">
+            <div class="selected-options" (click)="toggleLearningDropdown()">
+                <div *ngFor="let language of selectedLearningLanguages" (click)="removeLearningLanguage(language)">
+                    {{ language }}
+                </div>
+                <input type="text" id="selectedLearningLanguages"placeholder="Select Learning Languages" [readonly]="true" />
+            </div>
+            
+            <ng-container *ngIf="showLearningDropdown">
+                <div class="options">
+                    <label for="proficientLanguages">Proficient Languages:</label>
+                    <select id="proficientLanguages" formControlName="proficientLanguages" multiple>
+                        <option *ngFor="let language of languageOptions" [value]="language" (click)="addLearningLanguage(language)">{{ language }}</option>
+                    </select>
+                </div>
+            </ng-container>
+            
+        </div>
+
+        <h4>Select some of your interests. We'll try to recommend people who want to talk about what you want to talk about!</h4>
+        <div class="custom-dropdown">
+            <div class="selected-options" (click)="toggleInterestDropdown()">
+                <div *ngFor="let interest of selectedInterests" (click)="removeInterest(interest)">
+                    {{ interest }}
+                </div>
+                <input type="text" id="selectedInterests"placeholder="Select Interests" [readonly]="true" />
+            </div>
+            
+            <ng-container *ngIf="showInterestDropdown">
+                <div class="options">
+                    <label for="interests">Interests:</label>
+                    <select id="interests" formControlName="interests" multiple>
+                        <option *ngFor="let interest of interestOptions" [value]="interest" (click)="addInterest(interest)">{{ interest }}</option>
+                    </select>
+                </div>
+            </ng-container>
+            
+        </div>
+        
+        <button type="submit">Continue</button>
+    </form> 
+</div>

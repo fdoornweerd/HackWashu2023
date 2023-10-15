@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const supabase = require('../supabaseConfig');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const config = require('../middleware/config');
 
 // Import necessary libraries, including Supabase or your chosen authentication system.
 
@@ -14,20 +16,58 @@ router.post('/signup', async (req, res) => {
       const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of hashing rounds
   
       // Insert the user data into your Supabase user table
-      const { error } = await supabase
+      const { data, error } = await supabase
       .from('user')
       .insert(
         { username: username, password: hashedPassword, email: email }
       )
+      .select('id');
 
   
       if (error) {
         console.error(error);
         return res.status(400).json({ error: 'User registration failed', supabaseError: error });
       }
+
+      console.log(data);
+      const userId = data[0].id; // Assuming the ID is in the first element of the data array
+      const tokenUser = { userId: userId, username: username };
   
-      // User registration successful
-      return res.status(201).json({ message: 'User registered successfully' });
+
+      const token = jwt.sign(tokenUser, config.secretKey, { expiresIn: '1h' });
+      return res.status(201).json({
+        message: 'User registered successfully',
+        token: token
+      });
+
+
+      
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Server error' });
+    }
+  });
+
+  router.post('/profilesetup', async (req, res) => {
+    try {
+      console.log(req.body);
+      const { user_id, age, proficientLanguages, learningLanguages, interests } = req.body;
+  
+  
+      // Insert the user data into your Supabase user table
+      const { error } = await supabase
+      .from('user_info')
+      .insert(
+        { user_id: user_id, age: age, proficient_languages: proficientLanguages, learning_languages: learningLanguages, interests: interests }
+      )
+
+  
+      if (error) {
+        console.error(error);
+        return res.status(400).json({ error: 'Profile setup failed', supabaseError: error });
+      }
+  
+      return res.status(201).json({ message: 'Profile setup success' });
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Server error' });
