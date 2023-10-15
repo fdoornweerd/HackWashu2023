@@ -12,6 +12,11 @@
         <button (click) = 'call()' class="round-button">Call</button>
         <button (click) = 'facetime()' class="round-button">FaceTime</button>
     </div>
+</div>
 
-    
+<div class="centered-content" *ngIf="!contact">
+    <div class="button-container">
+        <button (click)="accept()"  class="round-buttonAR light-green">Accept</button>
+        <button (click)="reject()" class="round-buttonAR red">Reject</button>
+    </div>
 </div>

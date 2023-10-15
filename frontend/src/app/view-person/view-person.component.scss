@@ -26,6 +26,55 @@
 }
 
 
+.centered-contentAR {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Create space between buttons */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.round-buttonAR {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 130px;
+    height: 80px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 80px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Add margin to separate the buttons */
+}
+
+.round-buttonAR.light-green {
+    background-color: #8BC34A; /* Light green color */
+}
+
+.round-buttonAR.red {
+    background-color: #F44336; /* Red color */
+}
+.round-buttonAR.red:hover {
+    background-color: #c4362c;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.round-buttonAR.light-green:hover {
+    background-color: #a1f047; /* Light green color */
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 h1 {
     text-align: center;
