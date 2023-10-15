@@ -8,6 +8,7 @@
   
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  font-family: Andika;
 }
 
 .icons {
@@ -46,7 +47,8 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
-  right: 10px; 
+  right: 10px;
+  font-family: Andika; 
 }
 
 /* Button hover effect */

@@ -4,6 +4,7 @@
     padding: 5px;
     display: flex;
     align-items: center;
+    font-family: Andika;
 }
 
 .view-profile-button {
@@ -16,7 +17,9 @@
     cursor: pointer;
     transition: background-color 0.3s;
     margin-left: auto; /* Push the button to the right */
+    font-family: Andika;
 }
+
 
 .view-profile-button:hover {
     background-color: #1eff00; /* Lighter green on hover */
