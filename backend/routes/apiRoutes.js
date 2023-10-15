@@ -146,13 +146,16 @@ router.get('/get-recommendations/:id', async (req, res) => {
   try {
     const userId = req.params.id;
 
-    const { data, error } = await supabase
-      .rpc('run_sql', { sql: userComparisonQuery, params: { userId: userId } });
+    console.log("userId: " + userId);
 
+
+    const { data, error } = await supabase.rpc('get_user_recommendations', { userid: userId});
+    
     if (error) {
-      return res.status(500).json({ error: 'Server error' });
+      return res.status(500).json({ error: 'Server error', supabaseError: error });
     }
-
+    
+    console.log(data);
     if (data) {
       return res.status(200).json({ recommendations: data });
     } else {
@@ -164,7 +167,7 @@ router.get('/get-recommendations/:id', async (req, res) => {
   }
 });
 
-const userComparisonQuery = `
+const recommendationsQuery = `
     SELECT
         ui1.user_id AS user_id_1,
         ui2.user_id AS user_id_2,
@@ -188,5 +191,66 @@ const userComparisonQuery = `
 `;
 
 
+//this is the query to go back to to make sure it works
+const goodQuery = `SELECT
+ui1.user_id AS user_id_1,
+ui2.user_id AS user_id_2,
+array_to_string(ui1.proficient_languages, ', ') AS user1_proficient_languages,
+array_to_string(ui1.learning_languages, ', ') AS user1_learning_languages,
+array_to_string(ui2.proficient_languages, ', ') AS user2_proficient_languages,
+array_to_string(ui2.learning_languages, ', ') AS user2_learning_languages
+FROM public.user_info ui1
+JOIN public.user_info ui2
+ON ui1.user_id = 18  -- Replace 18 with the user ID you want to compare
+AND ui1.user_id <> ui2.user_id
+AND (
+ui1.proficient_languages && ui2.learning_languages
+AND ui1.learning_languages && ui2.proficient_languages
+)
+ORDER BY
+user1_proficient_languages,
+user1_learning_languages,
+user2_proficient_languages,
+user2_learning_languages;`;
+
+
+const goodConciseQuery = `SELECT
+ui1.user_id AS user_id_1,
+ui2.user_id AS user_id_2
+FROM public.user_info ui1
+JOIN public.user_info ui2
+ON ui1.user_id = 18  -- Subject user ID (user 18)
+AND ui1.user_id <> ui2.user_id
+AND (
+ui1.proficient_languages && ui2.learning_languages
+AND ui1.learning_languages && ui2.proficient_languages
+)
+ORDER BY
+ui2.proficient_languages, -- Order by the proficient languages of user2
+ui2.learning_languages, -- Order by the learning languages of user2
+ui1.proficient_languages, -- Order by the proficient languages of user1
+ui1.learning_languages; -- Order by the learning languages of user1
+`;
+
+
+// current function:
+// BEGIN
+//     RETURN QUERY
+//     SELECT
+//     ui2.user_id AS user_id_2
+//     FROM public.user_info ui1
+//     JOIN public.user_info ui2
+//     ON ui1.user_id = userId  -- Subject user ID (user 18)
+//     AND ui1.user_id <> ui2.user_id
+//     AND (
+//     ui1.proficient_languages && ui2.learning_languages
+//     AND ui1.learning_languages && ui2.proficient_languages
+//     )
+//     ORDER BY
+//     ui2.proficient_languages, -- Order by the proficient languages of user2
+//     ui2.learning_languages, -- Order by the learning languages of user2
+//     ui1.proficient_languages, -- Order by the proficient languages of user1
+//     ui1.learning_languages; -- Order by the learning languages of user1
+// END;
 
 module.exports = router;
