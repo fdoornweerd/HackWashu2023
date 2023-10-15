@@ -5,5 +5,7 @@ export interface User {
     learning_languages: string[] | null; // Corresponds to the 'learning_languages' column
     interests: string[] | null; // Corresponds to the 'interests' column
     email: string | null; // Corresponds to the 'email' column
+    first_name: string | null;
+    last_name: string | null;
   }
   
