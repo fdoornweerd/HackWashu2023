@@ -21,4 +21,16 @@ export class UserService {
       })
     );
   }
+
+  getRecommendations(userId: number): Observable<any> {
+    // Adjust the URL as needed
+    const url = `${this.apiUrl}/get-recommendations/${userId}`;
+
+    return this.http.get(url).pipe(
+      tap(response => {
+        // You can perform additional actions here based on the response
+        console.log('Recommendations retrieved:', response);
+      })
+    );
+  }
 }
