@@ -29,7 +29,7 @@ export class UserService {
     return this.http.get(url).pipe(
       tap(response => {
         // You can perform additional actions here based on the response
-        console.log('Recommendations retrieved:', response);
+        //console.log('Recommendations retrieved:', response);
       })
     );
   }

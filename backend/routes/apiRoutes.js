@@ -241,21 +241,21 @@ ui1.learning_languages; -- Order by the learning languages of user1
 // current function:
 // BEGIN
 //     RETURN QUERY
-//     SELECT
-//     ui2.user_id AS user_id_2
-//     FROM public.user_info ui1
-//     JOIN public.user_info ui2
-//     ON ui1.user_id = userId  -- Subject user ID (user 18)
-//     AND ui1.user_id <> ui2.user_id
-//     AND (
-//     ui1.proficient_languages && ui2.learning_languages
-//     AND ui1.learning_languages && ui2.proficient_languages
-//     )
-//     ORDER BY
-//     ui2.proficient_languages, -- Order by the proficient languages of user2
-//     ui2.learning_languages, -- Order by the learning languages of user2
-//     ui1.proficient_languages, -- Order by the proficient languages of user1
-//     ui1.learning_languages; -- Order by the learning languages of user1
+    // SELECT
+    // ui2.user_id AS user_id_2
+    // FROM public.user_info ui1
+    // JOIN public.user_info ui2
+    // ON ui1.user_id = userId  -- Subject user ID (user 18)
+    // AND ui1.user_id <> ui2.user_id
+    // AND (
+    // ui1.proficient_languages && ui2.learning_languages
+    // AND ui1.learning_languages && ui2.proficient_languages
+    // )
+    // ORDER BY
+    // ui2.proficient_languages, -- Order by the proficient languages of user2
+    // ui2.learning_languages, -- Order by the learning languages of user2
+    // ui1.proficient_languages, -- Order by the proficient languages of user1
+    // ui1.learning_languages; -- Order by the learning languages of user1
 // END;
 
 module.exports = router;
