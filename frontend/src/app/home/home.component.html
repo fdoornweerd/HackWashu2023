@@ -1,24 +1,28 @@
-<div class="home-container">
-  <!-- Hero Section -->
-  <div class="box hero">
-    <h1>LinguaLink</h1>
-    <p>Connect with language learners worldwide.</p>
+<div class="main-container">
+  <h1>LinguaLink</h1>
+  <p>Connect with language learners worldwide.</p>
+  <div class="cta-buttons"> <!-- Container for buttons -->
     <button [routerLink]="['/signin']" class="cta-button">Sign In</button>
     <button [routerLink]="['/signup']" class="cta-button">Sign Up</button>
-    
   </div>
+</div>
 
-  <!-- About Us and Discover Sections -->
-  <div class="about-us-and-discover">
-    <div class="box-white about-us">
+<div class="containers">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Andika" />
+  <div class="box">
+    <div class="about-us">
       <h2>About LinguaLink</h2>
       <p>
         LinguaLink connects language learners worldwide. Explore new languages and cultures while sharing your language skills. Join our global learning community today!
       </p>
     </div>
-
-    <div class="box-black features">
+  </div>
+  
+  <div class="box">
+    <div class="features">
       <h2>Discover</h2>
+      <div class="spacer"></div> <!-- Empty line -->
+      <div class="spacer"></div> <!-- Empty line -->
       <ul>
         <li>Learn from native speakers</li>
         <li>Teach your native language</li>
@@ -28,19 +32,19 @@
     </div>
   </div>
 
-  <!-- Testimonials Section -->
-  <div class="testimonial-and-contact">
-    <div class="box-white testimonials">
+  <div class="box">
+    <div class="testimonial">
       <h2>What Users Say</h2>
-      <div class="testimonial">
-        <p>"LinguaLink has been a game-changer for my language learning journey. I've met amazing people and improved my skills significantly."</p>
-        <p><strong>- Sarah, Language Enthusiast</strong></p>
-      </div>
+      <p>"LinguaLink has been a game-changer for my language learning journey. I've met amazing people and improved my skills significantly."</p>
+      <p><strong>- Sarah, Language Enthusiast</strong></p>
     </div>
+  </div>
 
-    <div class="box-black contact">
+  <div class="box">
+    <div class="contact">
       <h2>Contact Us</h2>
       <p>If you have any questions or feedback, feel free to reach out to us. We'd love to hear from you!</p>
+      <div class="spacer"></div>
       <button [routerLink]="['/contact']" class="cta-button">Contact Us</button>
     </div>
   </div>
