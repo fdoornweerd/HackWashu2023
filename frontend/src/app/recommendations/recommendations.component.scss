@@ -3,6 +3,11 @@
   border: 1px solid black;
   margin: 10px;
   padding: 5px;
+  border-radius: 8px;
+  padding: 80px;
+  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .icons {
